@@ -1,0 +1,1674 @@
+{
+  "_readme": [
+    "รายการ fun facts ที่ตรวจทานแล้ว 171 ข้อ",
+    "แต่ละข้อมี cat, text และ source; หน้าเว็บจะแสดง cat กับ text ส่วน source ใช้ตรวจสอบข้อมูล",
+    "ใน text ใช้ {ชื่อค่า} หรือ {ชื่อค่า:จำนวนทศนิยม} เพื่อแทรกตัวเลขสดได้",
+    "แต่ละข้ออาจมี calc โดย calc.base กำหนดหน่วยเวลาที่ผ่านไปเป็น seconds, days หรือ years และ calc.rate ใช้คูณจำนวนหน่วยเวลาที่ผ่านไป",
+    "ใช้ {value:d} เพื่อแสดงผลลัพธ์จาก calc โดย d คือจำนวนตำแหน่งทศนิยม",
+    "ค่าที่ใช้ได้: days, years, seconds_m, heartbeats_m, breaths_m, blinks_m, hair_m, nails_cm, sleep_y, meals, movies, songs_m, steps_m, steps_km, skin_cycles, butterflies, bamboo_km, plates_cm, everest_mm, tortoise_pct, voyager_au"
+  ],
+  "facts": [
+    {
+      "cat": "💓 หัวใจ",
+      "text": "หากสมมติว่าหัวใจเต้นเฉลี่ย 70 ครั้งต่อนาที นับจากเช้าวันแรกของ ป.1 หัวใจจะเต้นมาแล้วประมาณ {heartbeats_m:1} ล้านครั้ง",
+      "source": "https://www.nhlbi.nih.gov/health/heart",
+      "source_label": "NIH/NHLBI — How the Heart Works"
+    },
+    {
+      "cat": "😴 การนอน",
+      "text": "หากนอนเฉลี่ยวันละ 8 ชั่วโมง เวลาที่หลับตั้งแต่วันแรกของ ป.1 จะรวมกันราว {sleep_y:1} ปี",
+      "source": "https://www.nhlbi.nih.gov/health/sleep/how-much-sleep",
+      "source_label": "NIH/NHLBI — How Much Sleep Is Enough?"
+    },
+    {
+      "cat": "💡 ความเร็วแสง",
+      "text": "หากลำแสงเดินทางในสุญญากาศตลอดเวลานับจากเช้าวันแรกของ ป.1 ด้วยอัตราแน่นอน 299,792.458 กิโลเมตรต่อวินาที มันจะเดินทางได้ {value:0} กิโลเมตร",
+      "source": "https://www.nist.gov/pml/owm/si-units-length",
+      "calc": {
+        "base": "seconds",
+        "rate": 299792.458
+      },
+      "source_label": "NIST — SI Units: Length"
+    },
+    {
+      "cat": "💇 เส้นผม",
+      "text": "หากสมมติว่าผมยาวเดือนละ 1.25 ซม. และไม่เคยตัดตั้งแต่ ป.1 ตอนนี้จะยาวประมาณ {hair_m:1} เมตร",
+      "source": "https://www.aad.org/public/diseases/hair-loss/insider/shedding",
+      "source_label": "American Academy of Dermatology — Hair Shedding"
+    },
+    {
+      "cat": "👁️ การกะพริบตา",
+      "text": "หากกะพริบตา 15 ครั้งต่อนาทีในช่วงที่ตื่นสองในสามของวัน ตั้งแต่ ป.1 จะกะพริบไปประมาณ {blinks_m} ล้านครั้ง",
+      "source": "https://my.clevelandclinic.org/health/articles/blinking",
+      "source_label": "Cleveland Clinic — Blinking"
+    },
+    {
+      "cat": "🪐 ดาวเสาร์",
+      "text": "ดาวเสาร์หมุนรอบตัวเองหนึ่งรอบใน 10.7 ชั่วโมง ดังนั้นนับจากเช้าวันแรกของ ป.1 ดาวเสาร์หมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/saturn/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 2.2429906542
+      },
+      "source_label": "NASA Science — Saturn Facts"
+    },
+    {
+      "cat": "🎋 ต้นไผ่",
+      "text": "ไผ่บางชนิดโตได้สูงสุด 91 เซนติเมตรต่อวัน หากรักษาอัตราสูงสุดนั้นไว้ตั้งแต่เช้าวันแรกของ ป.1 ความยาวที่เพิ่มขึ้นจะเท่ากับ {value:2} เมตร",
+      "source": "https://www.guinnessworldrecords.com/world-records/fastest-growing-plant",
+      "calc": {
+        "base": "days",
+        "rate": 0.91
+      },
+      "source_label": "Guinness World Records — Fastest Growing Plant"
+    },
+    {
+      "cat": "🍚 มื้ออาหาร",
+      "text": "หากกินวันละ 3 มื้อทุกวัน ตั้งแต่วันแรกของ ป.1 ถึงวันนี้จะรวมประมาณ {meals} มื้อ",
+      "source": "https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/healthy-eating-and-blood-sugar/",
+      "source_label": "NHS — Healthy Eating Guidelines"
+    },
+    {
+      "cat": "☿️ ดาวพุธ",
+      "text": "ดาวพุธโคจรรอบดวงอาทิตย์หนึ่งรอบทุก 88 วันโลก นับจากเช้าวันแรกของ ป.1 จึงโคจรไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/mercury/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.01136363636
+      },
+      "source_label": "NASA Science — Mercury Facts"
+    },
+    {
+      "cat": "👣 ก้าวเดิน",
+      "text": "หากเดินเฉลี่ยวันละ 7,500 ก้าว ตั้งแต่ ป.1 จะรวมประมาณ {steps_m:1} ล้านก้าว หรือราว {steps_km} กม. เมื่อคิดก้าวละ 0.7 เมตร",
+      "source": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2734709",
+      "source_label": "JAMA Internal Medicine — Daily Step Count & Mortality"
+    },
+    {
+      "cat": "♀️ ดาวศุกร์",
+      "text": "ดาวศุกร์ใช้เวลา 243 วันโลกในการหมุนรอบตัวเองหนึ่งรอบ นับจากเช้าวันแรกของ ป.1 จึงหมุนไปประมาณ {value:2} รอบในทิศย้อนกับดาวเคราะห์ส่วนใหญ่",
+      "source": "https://science.nasa.gov/venus/venus-facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.00411522634
+      },
+      "source_label": "NASA Science — Venus Facts"
+    },
+    {
+      "cat": "🫁 ลมหายใจ",
+      "text": "หากหายใจเฉลี่ย 16 ครั้งต่อนาที ตั้งแต่วันแรกของ ป.1 จะหายใจไปประมาณ {breaths_m:1} ล้านครั้ง",
+      "source": "https://www.nhlbi.nih.gov/health/lungs",
+      "source_label": "NIH/NHLBI — How the Lungs Work"
+    },
+    {
+      "cat": "🎬 ภาพยนตร์",
+      "text": "หากเปิดภาพยนตร์ยาวเรื่องละ 2 ชั่วโมงต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 ถึงตอนนี้ จะดูจบประมาณ {movies} เรื่อง",
+      "source": "https://www.nist.gov/pml/owm/si-units-time",
+      "source_label": "NIST — SI Units: Time"
+    },
+    {
+      "cat": "♂️ ดาวอังคาร",
+      "text": "ดาวอังคารหมุนรอบตัวเองทุก 24.6 ชั่วโมง นับจากเช้าวันแรกของ ป.1 จึงมีวันดาวอังคารผ่านไปราว {value:2} วัน",
+      "source": "https://science.nasa.gov/mars/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.9756097561
+      },
+      "source_label": "NASA Science — Mars Facts"
+    },
+    {
+      "cat": "🌊 สันเขากลางแอตแลนติก",
+      "text": "พื้นมหาสมุทรตามสันเขากลางแอตแลนติกแผ่ขยายเฉลี่ย 2.5 เซนติเมตรต่อปี นับจากเช้าวันแรกของ ป.1 จึงแผ่เพิ่มตามอัตราเฉลี่ยประมาณ {value:2} เซนติเมตร",
+      "source": "https://pubs.usgs.gov/gip/dynamic/understanding.html",
+      "calc": {
+        "base": "years",
+        "rate": 2.5
+      },
+      "source_label": "USGS — Understanding Plate Motions"
+    },
+    {
+      "cat": "⚫ ดาวพลูโต",
+      "text": "หนึ่งวันบนดาวพลูโตยาวประมาณ 153 ชั่วโมงโลก นับจากเช้าวันแรกของ ป.1 ดาวพลูโตจึงหมุนรอบตัวเองไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.1568627451
+      },
+      "source_label": "NASA Science — Pluto Facts"
+    },
+    {
+      "cat": "♃ ดาวพฤหัสบดี",
+      "text": "ดาวพฤหัสบดีใช้เวลาเพียง 9.9 ชั่วโมงต่อการหมุนหนึ่งรอบ นับจากเช้าวันแรกของ ป.1 จึงหมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/jupiter/jupiter-facts/",
+      "calc": {
+        "base": "days",
+        "rate": 2.4242424242
+      },
+      "source_label": "NASA Science — Jupiter Facts"
+    },
+    {
+      "cat": "💅 เล็บมือ",
+      "text": "หากเล็บยาวเฉลี่ยเดือนละ 3.5 มม. และไม่เคยตัดตั้งแต่ ป.1 ตอนนี้จะยาวประมาณ {nails_cm} ซม.",
+      "source": "https://www.ncbi.nlm.nih.gov/books/NBK513133/",
+      "source_label": "NCBI — Nail Growth Physiology"
+    },
+    {
+      "cat": "♅ ดาวยูเรนัส",
+      "text": "ดาวยูเรนัสหมุนรอบตัวเองหนึ่งรอบในประมาณ 17 ชั่วโมง นับจากเช้าวันแรกของ ป.1 จึงหมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/uranus/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 1.4117647059
+      },
+      "source_label": "NASA Science — Uranus Facts"
+    },
+    {
+      "cat": "🎵 เสียงเพลง",
+      "text": "หากฟังเพลงยาวเฉลี่ย 3.5 นาทีต่อเนื่องตั้งแต่วันแรกของ ป.1 จะฟังจบประมาณ {songs_m:2} ล้านเพลง",
+      "source": "https://www.nist.gov/pml/owm/si-units-time",
+      "source_label": "NIST — SI Units: Time"
+    },
+    {
+      "cat": "⏱️ วินาที",
+      "text": "เวลาตั้งแต่เช้าวันแรกของ ป.1 ผ่านมาแล้ว {seconds_m:1} ล้านวินาที และตัวเลขนี้คำนวณใหม่ทุกวินาที",
+      "source": "https://www.nist.gov/pml/owm/si-units-time",
+      "source_label": "NIST — SI Units: Time"
+    },
+    {
+      "cat": "♆ ดาวเนปจูน",
+      "text": "ดาวเนปจูนหมุนรอบตัวเองหนึ่งรอบในประมาณ 16 ชั่วโมง นับจากเช้าวันแรกของ ป.1 จึงหมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/neptune/neptune-facts/",
+      "calc": {
+        "base": "days",
+        "rate": 1.5
+      },
+      "source_label": "NASA Science — Neptune Facts"
+    },
+    {
+      "cat": "🌍 การหมุนของโลก",
+      "text": "โลกใช้เวลา 23.9 ชั่วโมงในการหมุนรอบตัวเองหนึ่งรอบ นับจากเช้าวันแรกของ ป.1 โลกจึงหมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/earth/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 1.0041841004
+      },
+      "source_label": "NASA Science — Earth Facts"
+    },
+    {
+      "cat": "🛰️ วอยเอเจอร์ 1",
+      "text": "วอยเอเจอร์ 1 ถูกส่งขึ้นในปี 1977 ปัจจุบันอยู่ห่างดวงอาทิตย์ราว {voyager_au:1} AU และเคลื่อนออกไปประมาณ 3.6 AU ต่อปี",
+      "source": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+      "source_label": "NASA — Where Are Voyager 1 and 2 Now?"
+    },
+    {
+      "cat": "🛰️ สถานีอวกาศ",
+      "text": "สถานีอวกาศนานาชาติโคจรรอบโลกประมาณ 16 รอบต่อวัน หากนับต่อเนื่องจากเช้าวันแรกของ ป.1 จะเท่ากับ {value:0} รอบ",
+      "source": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+      "calc": {
+        "base": "days",
+        "rate": 16
+      },
+      "source_label": "NASA — ISS Facts and Figures"
+    },
+    {
+      "cat": "🌍 ปีของโลก",
+      "text": "โลกใช้เวลา 365.25 วันต่อการโคจรรอบดวงอาทิตย์หนึ่งรอบ นับจากเช้าวันแรกของ ป.1 จึงโคจรไปประมาณ {value:3} รอบ",
+      "source": "https://science.nasa.gov/earth/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.00273785079
+      },
+      "source_label": "NASA Science — Earth Facts"
+    },
+    {
+      "cat": "☿️ การหมุนของดาวพุธ",
+      "text": "ดาวพุธใช้เวลา 59 วันโลกในการหมุนรอบตัวเองหนึ่งรอบ นับจากเช้าวันแรกของ ป.1 จึงหมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/mercury/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.01694915254
+      },
+      "source_label": "NASA Science — Mercury Facts"
+    },
+    {
+      "cat": "🌕 ดวงจันทร์ถอยห่าง",
+      "text": "ดวงจันทร์กำลังถอยห่างจากโลกประมาณหนึ่งนิ้วต่อปี นับจากเช้าวันแรกของ ป.1 ระยะห่างจึงเพิ่มขึ้นราว {value:2} นิ้วตามอัตรานี้",
+      "source": "https://science.nasa.gov/moon/facts/",
+      "calc": {
+        "base": "years",
+        "rate": 1
+      },
+      "source_label": "NASA Science — Moon Facts"
+    },
+    {
+      "cat": "☀️ เส้นศูนย์สูตรดวงอาทิตย์",
+      "text": "พลาสมาบริเวณเส้นศูนย์สูตรดวงอาทิตย์หมุนครบรอบทุก 25 วันโลก นับจากเช้าวันแรกของ ป.1 จึงหมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/sun/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.04
+      },
+      "source_label": "NASA Science — Sun Facts"
+    },
+    {
+      "cat": "☀️ ขั้วดวงอาทิตย์",
+      "text": "พลาสมาบริเวณขั้วดวงอาทิตย์หมุนช้ากว่า โดยใช้ 36 วันโลกต่อรอบ นับจากเช้าวันแรกของ ป.1 จึงหมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/sun/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.02777777778
+      },
+      "source_label": "NASA Science — Sun Facts"
+    },
+    {
+      "cat": "🌌 ระบบสุริยะในทางช้างเผือก",
+      "text": "ระบบสุริยะเคลื่อนรอบใจกลางทางช้างเผือกด้วยความเร็วเฉลี่ย 720,000 กิโลเมตรต่อชั่วโมง นับจากเช้าวันแรกของ ป.1 จึงเดินทางประมาณ {value:0} กิโลเมตร",
+      "source": "https://science.nasa.gov/sun/facts/",
+      "calc": {
+        "base": "years",
+        "rate": 6311520000
+      },
+      "source_label": "NASA Science — Sun Facts"
+    },
+    {
+      "cat": "🧲 วัฏจักรสุริยะ",
+      "text": "สนามแม่เหล็กของดวงอาทิตย์ผ่านวัฏจักรราว 11 ปี นับจากเช้าวันแรกของ ป.1 เวลาที่ผ่านมาจึงเทียบได้กับ {value:3} วัฏจักรสุริยะ",
+      "source": "https://spaceplace.nasa.gov/solar-cycles/en/",
+      "calc": {
+        "base": "years",
+        "rate": 0.09090909091
+      },
+      "source_label": "NASA Space Place — Solar Cycles"
+    },
+    {
+      "cat": "🌕 การหมุนของดวงจันทร์",
+      "text": "ดวงจันทร์หมุนรอบตัวเองหนึ่งรอบใน 27 วันโลก นับจากเช้าวันแรกของ ป.1 จึงหมุนไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/moon/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.03703703704
+      },
+      "source_label": "NASA Science — Moon Facts"
+    },
+    {
+      "cat": "🌗 วัฏจักรข้างขึ้นข้างแรม",
+      "text": "จากมุมมองบนโลก ดวงจันทร์เวียนกลับมาครบรอบข้างขึ้นข้างแรมประมาณทุก 29 วัน นับจากเช้าวันแรกของ ป.1 จึงผ่านไปราว {value:2} รอบ",
+      "source": "https://science.nasa.gov/moon/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.03448275862
+      },
+      "source_label": "NASA Science — Moon Facts"
+    },
+    {
+      "cat": "🛰️ ระยะทางของสถานีอวกาศ",
+      "text": "สถานีอวกาศนานาชาติเดินทางด้วยความเร็วราว 5 ไมล์ต่อวินาที หากใช้อัตรานี้นับจากเช้าวันแรกของ ป.1 จะเดินทางได้ {value:0} ไมล์",
+      "source": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+      "calc": {
+        "base": "seconds",
+        "rate": 5
+      },
+      "source_label": "NASA — ISS Facts and Figures"
+    },
+    {
+      "cat": "⚛️ ซีเซียม-133",
+      "text": "นิยามหนึ่งวินาทีอาศัยความถี่การเปลี่ยนระดับของอะตอมซีเซียม-133 จำนวน 9,192,631,770 รอบ นับจากเช้าวันแรกของ ป.1 จึงเท่ากับ {value:0} รอบ",
+      "source": "https://www.nist.gov/pml/owm/si-units-time",
+      "calc": {
+        "base": "seconds",
+        "rate": 9192631770
+      },
+      "source_label": "NIST — SI Units: Time"
+    },
+    {
+      "cat": "🫘 ไต",
+      "text": "ไตที่แข็งแรงกรองเลือดประมาณ 150 ควอร์ตต่อวัน หากคิดต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรเลือดที่ผ่านการกรองจะอยู่ที่ราว {value:0} ควอร์ต",
+      "source": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+      "calc": {
+        "base": "days",
+        "rate": 150
+      },
+      "source_label": "NIH/NIDDK — How Kidneys Work"
+    },
+    {
+      "cat": "⚡ ฟ้าแลบในสหรัฐฯ",
+      "text": "สหรัฐอเมริกามีฟ้าแลบประมาณ 25 ล้านครั้งต่อปี หากสะสมตามอัตราเฉลี่ยนี้ตั้งแต่เช้าวันแรกของ ป.1 จะเกิดขึ้นราว {value:0} ครั้ง",
+      "source": "https://www.weather.gov/safety/lightning-science-overview",
+      "calc": {
+        "base": "years",
+        "rate": 25000000
+      },
+      "source_label": "NOAA/NWS — Lightning Science Overview"
+    },
+    {
+      "cat": "🌊 สายพานมหาสมุทร",
+      "text": "มวลน้ำหนึ่งก้อนอาจใช้เวลาประมาณ 1,000 ปีเดินทางครบสายพานหมุนเวียนมหาสมุทรโลก เวลาตั้งแต่เช้าวันแรกของ ป.1 จึงเท่ากับ {value:5} ของหนึ่งรอบ",
+      "source": "https://oceanservice.noaa.gov/education/tutorial_currents/05conveyor2.html",
+      "calc": {
+        "base": "years",
+        "rate": 0.001
+      },
+      "source_label": "NOAA Ocean Service — Ocean Conveyor Belt"
+    },
+    {
+      "cat": "🌊 น้ำขึ้นสูง",
+      "text": "ชายฝั่งส่วนใหญ่มีน้ำขึ้นสูงสองครั้งต่อวัน นับจากเช้าวันแรกของ ป.1 จึงเกิดน้ำขึ้นสูงตามแบบแผนนี้ประมาณ {value:0} ครั้ง",
+      "source": "https://oceanservice.noaa.gov/education/tutorial_tides/tides07_cycles.html",
+      "calc": {
+        "base": "days",
+        "rate": 2
+      },
+      "source_label": "NOAA Ocean Service — Tides and Water Levels"
+    },
+    {
+      "cat": "🌎 รอยเลื่อนซานแอนเดรียส",
+      "text": "แผ่นแปซิฟิกเลื่อนผ่านแผ่นอเมริกาเหนือตามแนวรอยเลื่อนซานแอนเดรียสเฉลี่ยประมาณ 5 เซนติเมตรต่อปี นับจากเช้าวันแรกของ ป.1 จึงเลื่อนไปราว {value:2} เซนติเมตร",
+      "source": "https://pubs.usgs.gov/gip/dynamic/understanding.html",
+      "calc": {
+        "base": "years",
+        "rate": 5
+      },
+      "source_label": "USGS — Understanding Plate Motions"
+    },
+    {
+      "cat": "♀️ ปีของดาวศุกร์",
+      "text": "ดาวศุกร์ใช้เวลา 225 วันโลกต่อการโคจรรอบดวงอาทิตย์หนึ่งรอบ นับจากเช้าวันแรกของ ป.1 จึงโคจรไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/venus/venus-facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.00444444444
+      },
+      "source_label": "NASA Science — Venus Facts"
+    },
+    {
+      "cat": "♂️ ปีของดาวอังคาร",
+      "text": "ดาวอังคารใช้เวลา 687 วันโลกต่อการโคจรรอบดวงอาทิตย์หนึ่งรอบ นับจากเช้าวันแรกของ ป.1 จึงโคจรไปประมาณ {value:2} รอบ",
+      "source": "https://science.nasa.gov/mars/facts/",
+      "calc": {
+        "base": "days",
+        "rate": 0.00145560408
+      },
+      "source_label": "NASA Science — Mars Facts"
+    },
+    {
+      "cat": "🧬 เซลล์ทั่วร่างกาย",
+      "text": "งานวิจัยประเมินว่าร่างกายผู้ใหญ่มาตรฐานผลัดเปลี่ยนเซลล์ราว 330,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงผลัดเปลี่ยนไปประมาณ {value:0} ล้านเซลล์",
+      "source": "https://www.nature.com/articles/s41591-020-01182-9",
+      "calc": {
+        "base": "days",
+        "rate": 330000
+      },
+      "source_label": "Sender & Milo, Nature Medicine (2020) — Cellular Turnover"
+    },
+    {
+      "cat": "⚖️ มวลเซลล์ที่ผลัดเปลี่ยน",
+      "text": "มวลของเซลล์ที่ร่างกายผู้ใหญ่มาตรฐานผลัดเปลี่ยนรวมราว 80 กรัมต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} กรัม",
+      "source": "https://www.nature.com/articles/s41591-020-01182-9",
+      "calc": {
+        "base": "days",
+        "rate": 80
+      },
+      "source_label": "Sender & Milo, Nature Medicine (2020) — Cellular Turnover"
+    },
+    {
+      "cat": "🩸 เม็ดเลือดแดงชุดใหม่",
+      "text": "ชุดข้อมูล cellular turnover ประเมินการผลัดเปลี่ยนเม็ดเลือดแดงราว 214,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 214000
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🛡️ นิวโทรฟิล",
+      "text": "ร่างกายผู้ใหญ่มาตรฐานผลัดเปลี่ยนนิวโทรฟิลราว 60,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 60000
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🛡️ ไทโมไซต์",
+      "text": "ไทโมไซต์ในต่อมไทมัสผลัดเปลี่ยนราว 610 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 610
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🛡️ ทีเซลล์โตเต็มวัย",
+      "text": "ทีเซลล์โตเต็มวัยผลัดเปลี่ยนราว 2,200 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 2200
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🛡️ เซลล์ต้นกำเนิดบีเซลล์",
+      "text": "เซลล์ต้นกำเนิดของบีเซลล์ผลัดเปลี่ยนราว 6,600 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 6600
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🛡️ บีเซลล์ระยะเปลี่ยนผ่าน",
+      "text": "บีเซลล์ระยะเปลี่ยนผ่านผลัดเปลี่ยนราว 290 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 290
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🛡️ บีเซลล์โตเต็มวัย",
+      "text": "บีเซลล์โตเต็มวัยผลัดเปลี่ยนราว 5,100 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 5100
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🛡️ โมโนไซต์",
+      "text": "โมโนไซต์ผลัดเปลี่ยนราว 1,520 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 1520
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🍽️ เยื่อบุกระเพาะอาหาร",
+      "text": "เซลล์เยื่อบุกระเพาะอาหารผลัดเปลี่ยนราว 1,300 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 1300
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🍽️ เยื่อบุลำไส้เล็ก",
+      "text": "เซลล์เยื่อบุลำไส้เล็กผลัดเปลี่ยนราว 22,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 22000
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🍽️ เยื่อบุลำไส้ใหญ่",
+      "text": "เซลล์เยื่อบุลำไส้ใหญ่ผลัดเปลี่ยนราว 17,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 17000
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🧴 เซลล์หนังกำพร้า",
+      "text": "เซลล์หนังกำพร้าผลัดเปลี่ยนราว 3,700 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 3700
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🧴 ไฟโบรบลาสต์ผิวหนัง",
+      "text": "ไฟโบรบลาสต์ในชั้นหนังแท้ผลัดเปลี่ยนราว 270 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 270
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🩹 เซลล์บุหลอดเลือด",
+      "text": "เซลล์บุผนังหลอดเลือดผลัดเปลี่ยนราว 240 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 240
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🫁 เยื่อบุถุงลม",
+      "text": "เซลล์เยื่อบุถุงลมปอดผลัดเปลี่ยนราว 3,500 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 3500
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🫁 แมโครฟาจในถุงลม",
+      "text": "แมโครฟาจในถุงลมปอดผลัดเปลี่ยนราว 180 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 180
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🫁 เยื่อบุหลอดลม",
+      "text": "เซลล์เยื่อบุหลอดลมผลัดเปลี่ยนราว 75 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 75
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🫁 เซลล์คั่นระหว่างเนื้อปอด",
+      "text": "เซลล์คั่นระหว่างเนื้อปอดผลัดเปลี่ยนราว 3,100 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 3100
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🟡 เซลล์ไขมัน",
+      "text": "เซลล์ไขมันผลัดเปลี่ยนราว 8 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 8
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "💪 เซลล์กล้ามเนื้อลาย",
+      "text": "เซลล์กล้ามเนื้อลายผลัดเปลี่ยนราว 13,000 เซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} เซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 13000
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "❤️ เซลล์กล้ามเนื้อหัวใจ",
+      "text": "เซลล์กล้ามเนื้อหัวใจผลัดเปลี่ยนราว 57,000 เซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} เซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 57000
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🧠 เซลล์ประสาท",
+      "text": "แบบจำลอง cellular turnover ประเมินการผลัดเปลี่ยนเซลล์ประสาทราว 300,000 เซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} เซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 300000
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🧠 เซลล์เกลีย",
+      "text": "เซลล์เกลียในระบบประสาทผลัดเปลี่ยนราว 3.1 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:1} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 3.1
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🟤 เซลล์ตับ",
+      "text": "เซลล์ตับหรือ hepatocyte ผลัดเปลี่ยนราว 640 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 640
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🟤 คุพเฟอร์เซลล์",
+      "text": "คุพเฟอร์เซลล์ซึ่งเป็นแมโครฟาจประจำตับผลัดเปลี่ยนราว 68 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 68
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🟤 สเตลเลตเซลล์ตับ",
+      "text": "สเตลเลตเซลล์ในตับผลัดเปลี่ยนราว 480 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
+      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "calc": {
+        "base": "days",
+        "rate": 480
+      },
+      "source_label": "Milo Lab — Cellular Turnover Dataset"
+    },
+    {
+      "cat": "🫘 เลือดที่ไตกรอง",
+      "text": "ไตที่แข็งแรงกรองเลือดประมาณครึ่งถ้วยต่อนาที นับจากเช้าวันแรกของ ป.1 จึงกรองเลือดไปประมาณ {value:0} ถ้วย",
+      "source": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+      "calc": {
+        "base": "days",
+        "rate": 720
+      },
+      "source_label": "NIH/NIDDK — How Kidneys Work"
+    },
+    {
+      "cat": "🚽 ปัสสาวะที่ไตสร้าง",
+      "text": "ผู้ใหญ่สร้างปัสสาวะวันละประมาณ 1 ถึง 2 ควอร์ต หากใช้อัตราต่ำสุด 1 ควอร์ตต่อวัน นับจากเช้าวันแรกของ ป.1 จะสร้างแล้วประมาณ {value:0} ควอร์ต",
+      "source": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+      "calc": {
+        "base": "days",
+        "rate": 1
+      },
+      "source_label": "NIH/NIDDK — How Kidneys Work"
+    },
+    {
+      "cat": "💧 น้ำย่อยจากลำไส้เล็ก",
+      "text": "ลำไส้เล็กหลั่ง intestinal juice ประมาณ 0.95 ถึง 1.9 ลิตรต่อวัน หากใช้อัตราต่ำสุด นับจากเช้าวันแรกของ ป.1 จะหลั่งแล้วประมาณ {value:1} ลิตร",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-5-the-small-and-large-intestines",
+      "calc": {
+        "base": "days",
+        "rate": 0.95
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.23.5"
+    },
+    {
+      "cat": "🔄 การแบ่งส่วนในดูโอดีนัม",
+      "text": "กล้ามเนื้อดูโอดีนัมแบ่งและคลุกเคล้าอาหารประมาณ 12 ครั้งต่อนาที นับจากเช้าวันแรกของ ป.1 จึงหดตัวแบบนี้ประมาณ {value:0} ครั้ง",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-5-the-small-and-large-intestines",
+      "calc": {
+        "base": "days",
+        "rate": 17280
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.23.5"
+    },
+    {
+      "cat": "🔄 การแบ่งส่วนในไอเลียม",
+      "text": "กล้ามเนื้อไอเลียมแบ่งและคลุกเคล้าอาหารประมาณ 8 ครั้งต่อนาที นับจากเช้าวันแรกของ ป.1 จึงหดตัวแบบนี้ประมาณ {value:0} ครั้ง",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-5-the-small-and-large-intestines",
+      "calc": {
+        "base": "days",
+        "rate": 11520
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.23.5"
+    },
+    {
+      "cat": "🌊 ระลอกกวาดลำไส้เล็ก",
+      "text": "migrating motility complex ใช้ราว 90 ถึง 120 นาทีเคลื่อนไปถึงปลายไอเลียม หากนับด้วยคาบ 120 นาทีนับจากเช้าวันแรกของ ป.1 จะครบประมาณ {value:0} ระลอก",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-5-the-small-and-large-intestines",
+      "calc": {
+        "base": "days",
+        "rate": 12
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.23.5"
+    },
+    {
+      "cat": "🟢 น้ำดีจากตับ",
+      "text": "เซลล์ตับหลั่งน้ำดีประมาณ 1 ลิตรต่อวัน นับจากเช้าวันแรกของ ป.1 จึงผลิตน้ำดีไปประมาณ {value:0} ลิตร",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder",
+      "calc": {
+        "base": "days",
+        "rate": 1
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.23.6"
+    },
+    {
+      "cat": "🟡 น้ำย่อยจากตับอ่อน",
+      "text": "ตับอ่อนผลิต pancreatic juice มากกว่า 1 ลิตรต่อวัน หากใช้เกณฑ์ 1 ลิตร นับจากเช้าวันแรกของ ป.1 จะผลิตไปมากกว่า {value:0} ลิตร",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder",
+      "calc": {
+        "base": "days",
+        "rate": 1
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.23.6"
+    },
+    {
+      "cat": "🟤 เลือดไหลผ่านตับ",
+      "text": "ขณะพักมีเลือดไหลผ่านตับประมาณ 1.5 ลิตรต่อนาที นับจากเช้าวันแรกของ ป.1 จึงไหลผ่านรวมประมาณ {value:0} ลิตร",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder",
+      "calc": {
+        "base": "days",
+        "rate": 2160
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.23.6"
+    },
+    {
+      "cat": "🧴 รอบผลัดชั้นหนังกำพร้า",
+      "text": "ชั้นนอกของหนังกำพร้าถูกแทนที่ทั้งหมดในเวลาประมาณ 4 สัปดาห์ นับจากเช้าวันแรกของ ป.1 จึงผ่านรอบผลัดชั้นประมาณ {value:1} รอบ",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/5-1-layers-of-the-skin",
+      "calc": {
+        "base": "days",
+        "rate": 0.03571428571
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.5.1"
+    },
+    {
+      "cat": "🩸 รุ่นอายุเม็ดเลือดแดง",
+      "text": "เม็ดเลือดแดงอยู่ในกระแสเลือดได้นานถึง 120 วัน นับจากเช้าวันแรกของ ป.1 เวลาที่ผ่านมาจึงเท่ากับประมาณ {value:1} รุ่นอายุเม็ดเลือดแดง",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+      "calc": {
+        "base": "days",
+        "rate": 0.008333333333
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.18.3"
+    },
+    {
+      "cat": "❤️ ปริมาตรเลือดจากหัวใจ",
+      "text": "หัวใจของคนหนัก 70 กก. ขณะพักมี cardiac output เฉลี่ยประมาณ 5.25 ลิตรต่อนาที นับจากเช้าวันแรกของ ป.1 จึงสูบเลือดรวมประมาณ {value:0} ลิตร",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-4-cardiac-physiology",
+      "calc": {
+        "base": "days",
+        "rate": 7560
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.19.4"
+    },
+    {
+      "cat": "😴 วัฏจักรการนอน",
+      "text": "การนอนหนึ่งคืนมักมีวัฏจักร REM และ non-REM 4 ถึง 6 รอบ หากใช้อัตราต่ำสุด 4 รอบต่อคืน นับจากเช้าวันแรกของ ป.1 จะผ่านมาประมาณ {value:0} รอบ",
+      "source": "https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep",
+      "calc": {
+        "base": "days",
+        "rate": 4
+      },
+      "source_label": "NIH/NHLBI — Stages of Sleep"
+    },
+    {
+      "cat": "🧪 น้ำย่อยในกระเพาะ",
+      "text": "กระเพาะอาหารหลั่ง gastric juice ประมาณ 2 ลิตรต่อวัน นับจากเช้าวันแรกของ ป.1 จึงหลั่งไปประมาณ {value:0} ลิตร",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-4-the-stomach",
+      "calc": {
+        "base": "days",
+        "rate": 2
+      },
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.23.4"
+    },
+    {
+      "cat": "🚽 มวลอุจจาระ",
+      "text": "งานทบทวนรายงานว่าผู้ใหญ่ขับอุจจาระเปียกเฉลี่ยอย่างน้อย 100 กรัมต่อวัน หากใช้อัตราต่ำสุด นับจากเช้าวันแรกของ ป.1 จะรวมประมาณ {value:0} กรัม",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4991899/",
+      "calc": {
+        "base": "days",
+        "rate": 100
+      },
+      "source_label": "Rose et al., Crit. Rev. Env. Sci. Tech. (2015)"
+    },
+    {
+      "cat": "🌿 เคลป์ยักษ์เติบโต",
+      "text": "ในสภาพเหมาะสม เคลป์เติบโตได้ถึงวันละ 18 นิ้ว ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ความยาวที่เพิ่มตามอัตราสูงสุดนี้คือ {value:2} นิ้ว",
+      "source": "https://oceanservice.noaa.gov/facts/kelp.html",
+      "calc": {
+        "base": "days",
+        "rate": 18
+      },
+      "source_label": "NOAA Ocean Service — Giant Kelp"
+    },
+    {
+      "cat": "🪸 ปะการังก้อนโตช้า",
+      "text": "ปะการังชนิดก้อนโตอย่างน้อยราว 0.3 เซนติเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงเพิ่มความสูงตามขอบล่างได้ {value:5} เซนติเมตร",
+      "source": "https://floridakeys.noaa.gov/corals/coralgrowth.html",
+      "calc": {
+        "base": "years",
+        "rate": 0.3
+      },
+      "source_label": "NOAA Florida Keys — Coral Growth Rates"
+    },
+    {
+      "cat": "🪸 ปะการังกิ่งโตเร็ว",
+      "text": "ปะการังแตกกิ่งบางชนิดยืดได้ถึง 10 เซนติเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 การเติบโตตามอัตราสูงสุดคือ {value:5} เซนติเมตร",
+      "source": "https://floridakeys.noaa.gov/corals/coralgrowth.html",
+      "calc": {
+        "base": "years",
+        "rate": 10
+      },
+      "source_label": "NOAA Florida Keys — Coral Growth Rates"
+    },
+    {
+      "cat": "🌳 วงปีของต้นไม้",
+      "text": "ต้นไม้ในเขตอบอุ่นสร้างวงการเจริญเติบโตหนึ่งวงต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ลำต้นจึงสร้างวงปีตามเวลาไปประมาณ {value:2} วง",
+      "source": "https://www.nps.gov/articles/000/tree-rings.htm",
+      "calc": {
+        "base": "years",
+        "rate": 1
+      },
+      "source_label": "National Park Service — Tree Rings"
+    },
+    {
+      "cat": "🌱 เถาคุดซู",
+      "text": "ช่วงที่เติบโตเต็มที่ เถาคุดซูยืดได้ถึงหนึ่งฟุตต่อวัน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ระยะที่ยืดตามอัตราสูงสุดคือ {value:2} ฟุต",
+      "source": "https://www.invasivespeciesinfo.gov/terrestrial/plants/kudzu",
+      "calc": {
+        "base": "days",
+        "rate": 1
+      },
+      "source_label": "USDA — Kudzu Invasive Species"
+    },
+    {
+      "cat": "🌺 วันบานของบุกยักษ์",
+      "text": "บุกยักษ์บานครั้งละ 2-3 วันและเว้น 2-3 ปีต่อรอบ ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 เมื่อนับขั้นต่ำ 2 วันต่อคาบยาว 3 ปีจึงมีวันบานสะสม {value:5} วัน",
+      "source": "https://www.usbg.gov/gardens-plants/corpse-flowers",
+      "calc": {
+        "base": "years",
+        "rate": 0.66666666667
+      },
+      "source_label": "U.S. Botanic Garden — Corpse Flowers"
+    },
+    {
+      "cat": "🌲 เนื้อไม้ซีคัวยายักษ์",
+      "text": "ซีคัวยายักษ์ต้นโตสามารถสร้างเนื้อไม้มากกว่าหนึ่งลูกบาศก์หลาต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงสร้างอย่างน้อย {value:5} ลูกบาศก์หลา",
+      "source": "https://www.nps.gov/seki/learn/nature/bigtrees.htm",
+      "calc": {
+        "base": "years",
+        "rate": 1
+      },
+      "source_label": "National Park Service — Giant Sequoias"
+    },
+    {
+      "cat": "🌺 บุกยักษ์ออกดอก",
+      "text": "บุกยักษ์หรือ corpse flower ออกดอกหนึ่งครั้งทุก 2-3 ปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 เมื่อนับด้วยคาบยาว 3 ปีจึงออกดอกอย่างน้อย {value:5} รอบ",
+      "source": "https://www.usbg.gov/gardens-plants/corpse-flowers",
+      "calc": {
+        "base": "years",
+        "rate": 0.33333333333
+      },
+      "source_label": "U.S. Botanic Garden — Corpse Flowers"
+    },
+    {
+      "cat": "🐼 แพนด้ากินไผ่",
+      "text": "แพนด้ายักษ์กินไผ่วันละ 70-100 ปอนด์ ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาณตามขอบล่าง 70 ปอนด์ต่อวันคือ {value:0} ปอนด์",
+      "source": "https://nationalzoo.si.edu/animals/giant-panda",
+      "calc": {
+        "base": "days",
+        "rate": 70
+      },
+      "source_label": "Smithsonian National Zoo — Giant Panda"
+    },
+    {
+      "cat": "🐼 เวลาออกหากินของแพนด้า",
+      "text": "แพนด้ายักษ์ใช้เวลาหาและกินอาหารวันละ 10-16 ชั่วโมง ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 เวลาตามขอบล่างสะสมเป็น {value:2} ชั่วโมง",
+      "source": "https://nationalzoo.si.edu/animals/giant-panda",
+      "calc": {
+        "base": "days",
+        "rate": 10
+      },
+      "source_label": "Smithsonian National Zoo — Giant Panda"
+    },
+    {
+      "cat": "🐘 ช้างเอเชียเดินหาอาหาร",
+      "text": "ข้อมูลติดปลอกวิทยุพบว่าช้างเอเชียเดินราว 1.6-6.4 กิโลเมตรต่อวัน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ระยะตามขอบล่างคือ {value:2} กิโลเมตร",
+      "source": "https://nationalzoo.si.edu/animals/asian-elephant",
+      "calc": {
+        "base": "days",
+        "rate": 1.6
+      },
+      "source_label": "Smithsonian National Zoo — Asian Elephant"
+    },
+    {
+      "cat": "🐘 ช้างเอเชียกินพืช",
+      "text": "ช้างเอเชียกินอาหารประมาณ 74-150 กิโลกรัมต่อวัน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาณตามขอบล่างสะสมเป็น {value:0} กิโลกรัม",
+      "source": "https://nationalzoo.si.edu/animals/asian-elephant",
+      "calc": {
+        "base": "days",
+        "rate": 74
+      },
+      "source_label": "Smithsonian National Zoo — Asian Elephant"
+    },
+    {
+      "cat": "🐘 ช้างเอเชียดื่มน้ำ",
+      "text": "ช้างเอเชียในธรรมชาติดื่มน้ำราว 189 ลิตรต่อวัน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาณตามอัตรานี้คือ {value:0} ลิตร",
+      "source": "https://nationalzoo.si.edu/animals/asian-elephant",
+      "calc": {
+        "base": "days",
+        "rate": 189
+      },
+      "source_label": "Smithsonian National Zoo — Asian Elephant"
+    },
+    {
+      "cat": "🐘 วงรอบสืบพันธุ์ช้าง",
+      "text": "ช้างเอเชียเพศเมียเข้าสู่วงรอบเป็นสัดประมาณทุก 115 วัน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงผ่านวงรอบตามคาบนี้ {value:5} รอบ",
+      "source": "https://nationalzoo.si.edu/animals/asian-elephant",
+      "calc": {
+        "base": "days",
+        "rate": 0.00869565217
+      },
+      "source_label": "Smithsonian National Zoo — Asian Elephant"
+    },
+    {
+      "cat": "🦦 นากแม่น้ำว่ายน้ำ",
+      "text": "นากแม่น้ำอเมริกาเหนือว่ายได้เร็วถึง 13 กิโลเมตรต่อชั่วโมง ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ระยะตามความเร็วสูงสุดนี้คือ {value:0} กิโลเมตร",
+      "source": "https://nationalzoo.si.edu/animals/north-american-river-otter",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.00361111111
+      },
+      "source_label": "Smithsonian National Zoo — River Otter"
+    },
+    {
+      "cat": "🐋 วาฬสีเทาอพยพ",
+      "text": "วาฬสีเทาอพยพไปกลับประมาณ 10,000 ไมล์ต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ระยะอพยพตามอัตรานี้คือ {value:2} ไมล์",
+      "source": "https://www.fisheries.noaa.gov/species/gray-whale",
+      "calc": {
+        "base": "years",
+        "rate": 10000
+      },
+      "source_label": "NOAA Fisheries — Gray Whale"
+    },
+    {
+      "cat": "🐢 เต่ามะเฟืองเดินทาง",
+      "text": "เต่ามะเฟืองบางตัวว่ายระหว่างแหล่งวางไข่กับแหล่งอาหารมากกว่า 10,000 ไมล์ต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ระยะขั้นต่ำนี้คือ {value:2} ไมล์",
+      "source": "https://www.fisheries.noaa.gov/species/leatherback-turtle",
+      "calc": {
+        "base": "years",
+        "rate": 10000
+      },
+      "source_label": "NOAA Fisheries — Leatherback Turtle"
+    },
+    {
+      "cat": "🐢 เต่ามะเฟืองกลับมาวางไข่",
+      "text": "เต่ามะเฟืองเพศเมียกลับมาวางไข่ทุก 2-4 ปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 เมื่อนับด้วยคาบยาว 4 ปีจะได้อย่างน้อย {value:5} รอบ",
+      "source": "https://www.fisheries.noaa.gov/species/leatherback-turtle",
+      "calc": {
+        "base": "years",
+        "rate": 0.25
+      },
+      "source_label": "NOAA Fisheries — Leatherback Turtle"
+    },
+    {
+      "cat": "🦪 หอยนางรมกรองน้ำ",
+      "text": "หอยนางรมโตเต็มวัยกรองน้ำได้ถึง 50 แกลลอนต่อวันในสภาพเหมาะสม ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรตามอัตราสูงสุดคือ {value:0} แกลลอน",
+      "source": "https://www.chesapeakebay.net/discover/field-guide/entry/eastern-oyster",
+      "calc": {
+        "base": "days",
+        "rate": 50
+      },
+      "source_label": "Chesapeake Bay Program — Eastern Oyster"
+    },
+    {
+      "cat": "🦪 หอยนางรมสร้างไข่",
+      "text": "หอยนางรมตะวันออกเพศเมียสร้างไข่ได้ราว 100 ล้านฟองต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามอัตรานี้คือ {value:0} ฟอง",
+      "source": "https://www.chesapeakebay.net/discover/field-guide/entry/eastern-oyster",
+      "calc": {
+        "base": "years",
+        "rate": 100000000
+      },
+      "source_label": "Chesapeake Bay Program — Eastern Oyster"
+    },
+    {
+      "cat": "🪰 จักจั่นคาบ 17 ปี",
+      "text": "จักจั่นแบบ periodical บางกลุ่มขึ้นจากดินพร้อมกันทุก 17 ปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงผ่านคาบจักจั่น {value:5} คาบ",
+      "source": "https://www.fs.usda.gov/foresthealth/docs/fidls/FIDL-173-PeriodicalCicadas.pdf",
+      "calc": {
+        "base": "years",
+        "rate": 0.05882352941
+      },
+      "source_label": "USDA Forest Service — Periodical Cicadas"
+    },
+    {
+      "cat": "🐦 ปีกนกฮัมมิงเบิร์ด",
+      "text": "นกฮัมมิงเบิร์ดคอทับทิมกระพือปีกได้มากกว่า 50 ครั้งต่อวินาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามเกณฑ์ 50 ครั้งต่อวินาทีคือ {value:0} ครั้ง",
+      "source": "https://nationalzoo.si.edu/animals/ruby-throated-hummingbird",
+      "calc": {
+        "base": "seconds",
+        "rate": 50
+      },
+      "source_label": "Smithsonian National Zoo — Hummingbird"
+    },
+    {
+      "cat": "🪵 นกหัวขวานเจาะไม้",
+      "text": "นกหัวขวานบางชนิดเคาะไม้ได้ถึง 20 ครั้งต่อวินาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามอัตราสูงสุดนี้คือ {value:0} ครั้ง",
+      "source": "https://www.allaboutbirds.org/news/how-woodpeckers-can-thrive-with-powerful-pecking/",
+      "calc": {
+        "base": "seconds",
+        "rate": 20
+      },
+      "source_label": "Cornell Lab of Ornithology — Woodpecker Pecking"
+    },
+    {
+      "cat": "🐘 ช่วงห่างการเกิดลูกช้าง",
+      "text": "ช้างเอเชียมีช่วงห่างระหว่างการให้กำเนิดเฉลี่ย 3-8 ปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 เมื่อนับด้วยคาบยาว 8 ปีจึงเทียบได้กับอย่างน้อย {value:5} รอบ",
+      "source": "https://nationalzoo.si.edu/animals/asian-elephant",
+      "calc": {
+        "base": "years",
+        "rate": 0.125
+      },
+      "source_label": "Smithsonian National Zoo — Asian Elephant"
+    },
+    {
+      "cat": "🐋 หัวใจวาฬสีน้ำเงินยามดำน้ำ",
+      "text": "งานวิจัยวัดชีพจรวาฬสีน้ำเงินขณะดำน้ำลึกได้ต่ำสุด 2 ครั้งต่อนาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามอัตราต่ำสุดนี้คือ {value:0} ครั้ง",
+      "source": "https://doi.org/10.1073/pnas.1914273116",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.03333333333
+      },
+      "source_label": "Goldbogen et al., PNAS (2019) — Blue Whale Heart Rate"
+    },
+    {
+      "cat": "🌎 แผ่นดินไหวทั่วโลก",
+      "text": "USGS ประเมินว่าเกิดแผ่นดินไหวที่ตรวจจับตำแหน่งได้ราว 500,000 ครั้งต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามค่าเฉลี่ยคือ {value:0} ครั้ง",
+      "source": "https://www.usgs.gov/programs/earthquake-hazards/lists-maps-and-statistics",
+      "calc": {
+        "base": "years",
+        "rate": 500000
+      },
+      "source_label": "USGS — Earthquake Statistics"
+    },
+    {
+      "cat": "🌋 ภูเขาไฟปะทุ",
+      "text": "ในแต่ละปีมีภูเขาไฟราว 50-70 ลูกปะทุบนโลก ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามขอบล่าง 50 ครั้งต่อปีคือ {value:2} ครั้ง",
+      "source": "https://www.usgs.gov/faqs/how-many-active-volcanoes-are-there-earth",
+      "calc": {
+        "base": "years",
+        "rate": 50
+      },
+      "source_label": "USGS — Active Volcanoes FAQ"
+    },
+    {
+      "cat": "♨️ โอลด์เฟธฟูลพ่นน้ำ",
+      "text": "ไกเซอร์ Old Faithful มีช่วงห่างการปะทุแบบยาวเฉลี่ย 94 นาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงเทียบได้กับการปะทุ {value:2} ครั้ง",
+      "source": "https://www.nps.gov/yell/planyourvisit/geyser-activity.htm",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.00017730496
+      },
+      "source_label": "National Park Service — Yellowstone Geyser Activity"
+    },
+    {
+      "cat": "♨️ เดซีไกเซอร์",
+      "text": "Daisy Geyser มีช่วงห่างเฉลี่ย 2 ชั่วโมง 45 นาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงเทียบได้กับการปะทุ {value:2} ครั้ง",
+      "source": "https://www.nps.gov/yell/planyourvisit/geyser-activity.htm",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.0001010101
+      },
+      "source_label": "National Park Service — Yellowstone Geyser Activity"
+    },
+    {
+      "cat": "♨️ แกรนด์ไกเซอร์",
+      "text": "Grand Geyser มีช่วงห่างเฉลี่ย 6 ชั่วโมง 30 นาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงเทียบได้กับการปะทุ {value:2} ครั้ง",
+      "source": "https://www.nps.gov/yell/planyourvisit/geyser-activity.htm",
+      "calc": {
+        "base": "seconds",
+        "rate": 4.273504e-05
+      },
+      "source_label": "National Park Service — Yellowstone Geyser Activity"
+    },
+    {
+      "cat": "♨️ ริเวอร์ไซด์ไกเซอร์",
+      "text": "Riverside Geyser ปะทุห่างกันเฉลี่ย 6 ชั่วโมง 30 นาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงเทียบได้กับการปะทุ {value:2} ครั้ง",
+      "source": "https://www.nps.gov/yell/planyourvisit/geyser-activity.htm",
+      "calc": {
+        "base": "seconds",
+        "rate": 4.273504e-05
+      },
+      "source_label": "National Park Service — Yellowstone Geyser Activity"
+    },
+    {
+      "cat": "🏞️ น้ำไหลของแม่น้ำแอมะซอน",
+      "text": "แม่น้ำแอมะซอนปล่อยน้ำเฉลี่ยราว 209,000 ลูกบาศก์เมตรต่อวินาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรตามอัตรานี้คือ {value:0} ลูกบาศก์เมตร",
+      "source": "https://www.usgs.gov/special-topics/water-science-school/science/rivers-streams-and-creeks",
+      "calc": {
+        "base": "seconds",
+        "rate": 209000
+      },
+      "source_label": "USGS — Rivers, Streams, and Creeks"
+    },
+    {
+      "cat": "🌊 กระแสน้ำกัลฟ์สตรีม",
+      "text": "กัลฟ์สตรีมไหลด้วยความเร็วเฉลี่ย 4 ไมล์ต่อชั่วโมง ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ระยะตามความเร็วเฉลี่ยนี้คือ {value:0} ไมล์",
+      "source": "https://oceanservice.noaa.gov/facts/gulfstreamspeed.html",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.00111111111
+      },
+      "source_label": "NOAA Ocean Service — Gulf Stream Speed"
+    },
+    {
+      "cat": "🐼 รอบเลี้ยงลูกของแพนด้า",
+      "text": "แพนด้ายักษ์เพศเมียในธรรมชาติเลี้ยงลูกสำเร็จได้อย่างมากทุกสองปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงเทียบได้กับรอบเลี้ยงลูกสูงสุด {value:5} รอบ",
+      "source": "https://nationalzoo.si.edu/animals/giant-panda",
+      "calc": {
+        "base": "years",
+        "rate": 0.5
+      },
+      "source_label": "Smithsonian National Zoo — Giant Panda"
+    },
+    {
+      "cat": "🌧️ ฝนและหิมะทั่วโลก",
+      "text": "วัฏจักรน้ำทำให้น้ำตกกลับสู่พื้นโลกประมาณ 505,000 ลูกบาศก์กิโลเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรสะสมคือ {value:2} ลูกบาศก์กิโลเมตร",
+      "source": "https://www.usgs.gov/media/images/global-water-cycle",
+      "calc": {
+        "base": "years",
+        "rate": 505000
+      },
+      "source_label": "USGS — Global Water Cycle"
+    },
+    {
+      "cat": "☀️ การระเหยจากมหาสมุทร",
+      "text": "มหาสมุทรระเหยน้ำสู่บรรยากาศราว 434,000 ลูกบาศก์กิโลเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรสะสมคือ {value:2} ลูกบาศก์กิโลเมตร",
+      "source": "https://www.usgs.gov/media/images/global-water-cycle",
+      "calc": {
+        "base": "years",
+        "rate": 434000
+      },
+      "source_label": "USGS — Global Water Cycle"
+    },
+    {
+      "cat": "🌿 การคายระเหยบนแผ่นดิน",
+      "text": "การระเหยและคายน้ำบนแผ่นดินส่งน้ำขึ้นบรรยากาศราว 71,000 ลูกบาศก์กิโลเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรสะสมคือ {value:2} ลูกบาศก์กิโลเมตร",
+      "source": "https://www.usgs.gov/media/images/global-water-cycle",
+      "calc": {
+        "base": "years",
+        "rate": 71000
+      },
+      "source_label": "USGS — Global Water Cycle"
+    },
+    {
+      "cat": "🌡️ วัฏจักร ENSO",
+      "text": "เอลนีโญและลานีญาเกิดสลับในช่วงประมาณทุก 2-7 ปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 เมื่อนับด้วยคาบยาว 7 ปีจึงผ่านอย่างน้อย {value:5} รอบ",
+      "source": "https://oceanservice.noaa.gov/facts/ninonina.html",
+      "calc": {
+        "base": "years",
+        "rate": 0.14285714286
+      },
+      "source_label": "NOAA Ocean Service — El Niño and La Niña"
+    },
+    {
+      "cat": "☁️ คลื่นอากาศ MJO",
+      "text": "Madden-Julian Oscillation ใช้เวลาราว 30-60 วันเคลื่อนวนในเขตร้อน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 เมื่อนับคาบ 60 วันจึงผ่านอย่างน้อย {value:5} รอบ",
+      "source": "https://www.climate.gov/news-features/blogs/enso/what-mjo-and-why-do-we-care",
+      "calc": {
+        "base": "days",
+        "rate": 0.01666666667
+      },
+      "source_label": "NOAA Climate.gov — MJO"
+    },
+    {
+      "cat": "🐦 น้ำหวานของฮัมมิงเบิร์ด",
+      "text": "นกฮัมมิงเบิร์ดคอทับทิมดื่มน้ำหวานได้ถึงครึ่งหนึ่งของน้ำหนักตัวต่อวัน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาณสะสมจึงเท่ากับ {value:2} เท่าของน้ำหนักตัว",
+      "source": "https://nationalzoo.si.edu/animals/ruby-throated-hummingbird",
+      "calc": {
+        "base": "days",
+        "rate": 0.5
+      },
+      "source_label": "Smithsonian National Zoo — Hummingbird"
+    },
+    {
+      "cat": "🌪️ ทอร์นาโดในสหรัฐฯ",
+      "text": "สหรัฐฯ เกิดทอร์นาโดเฉลี่ยประมาณ 1,200 ลูกต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามค่าเฉลี่ยนี้คือ {value:0} ลูก",
+      "source": "https://www.nssl.noaa.gov/education/svrwx101/tornadoes/",
+      "calc": {
+        "base": "years",
+        "rate": 1200
+      },
+      "source_label": "NOAA/NSSL — Tornadoes"
+    },
+    {
+      "cat": "🌋 แผ่นแปซิฟิกใต้ฮาวาย",
+      "text": "แผ่นแปซิฟิกที่พาหมู่เกาะฮาวายเคลื่อนไปทางตะวันตกเฉียงเหนือราว 7 เซนติเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงขยับ {value:5} เซนติเมตร",
+      "source": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-hawaii-hotspot-moving-plate",
+      "calc": {
+        "base": "years",
+        "rate": 7
+      },
+      "source_label": "USGS — Hawaii Hotspot Plate Movement"
+    },
+    {
+      "cat": "🧊 ธารน้ำแข็ง Jakobshavn",
+      "text": "ธารน้ำแข็ง Jakobshavn เคยไหลเร็วราว 40 เมตรต่อวัน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ระยะตามอัตราที่วัดได้นี้คือ {value:2} เมตร",
+      "source": "https://earthobservatory.nasa.gov/images/145185/major-greenland-glacier-is-growing",
+      "calc": {
+        "base": "days",
+        "rate": 40
+      },
+      "source_label": "NASA Earth Observatory — Jakobshavn Glacier"
+    },
+    {
+      "cat": "🚅 โทไคโดชินคันเซ็น",
+      "text": "ถ้าโทไคโดชินคันเซ็นวิ่งต่อเนื่องที่ความเร็วสูงสุด 285 กม./ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะเดินทางได้ประมาณ {value:0} กม.",
+      "source": "https://global.jr-central.co.jp/en/company/about_shinkansen/",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.07916666666666666
+      },
+      "source_label": "JR Central — About the Shinkansen"
+    },
+    {
+      "cat": "🚄 Acela",
+      "text": "ถ้ารถไฟ Acela วิ่งต่อเนื่องที่ความเร็วสูงสุด 150 ไมล์/ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะเดินทางได้ประมาณ {value:0} กม.",
+      "source": "https://www.amtrak.com/next-generation-high-speed-trains",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.067056
+      },
+      "source_label": "Amtrak — Next-Gen High-Speed Trains"
+    },
+    {
+      "cat": "💶 ธนบัตรต่อแผ่นพิมพ์",
+      "text": "ถ้าแท่น intaglio ใช้แผ่นละ 50 ฉบับและเดินเต็มอัตรา 10,000 แผ่น/ชม. ต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะพิมพ์ธนบัตรประมาณ {value:0} ฉบับ",
+      "source": "https://www.bep.gov/currency/how-money-is-made",
+      "calc": {
+        "base": "days",
+        "rate": 12000000
+      },
+      "source_label": "U.S. Bureau of Engraving & Printing — How Money Is Made"
+    },
+    {
+      "cat": "✈️ Concorde",
+      "text": "ถ้า Concorde บินต่อเนื่องที่ความเร็วเดินทาง 1,350 ไมล์/ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะบินได้ประมาณ {value:0} กม.",
+      "source": "https://airandspace.si.edu/collection-objects/air-france-concorde/nasm_A20030139000",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.603504
+      },
+      "source_label": "Smithsonian Air & Space — Concorde"
+    },
+    {
+      "cat": "🚤 เรือเร็ว Spirit of Australia",
+      "text": "ถ้าเรือ Spirit of Australia รักษาสถิติโลกทางน้ำ 511.09 กม./ชม. ต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะแล่นได้ประมาณ {value:0} กม.",
+      "source": "https://www.guinnessworldrecords.com/world-records/water-speed-record-(fastest-boat)",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.14196944444444445
+      },
+      "source_label": "Guinness World Records — Water Speed Record"
+    },
+    {
+      "cat": "🔎 พิกเซลตรวจธนบัตร",
+      "text": "ถ้า OCIS ตรวจ 4 ล้านพิกเซลต่อแผ่นที่ 2.5 แผ่น/วินาทีต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะตรวจสะสมประมาณ {value:0} พิกเซล",
+      "source": "https://www.bep.gov/currency/how-money-is-made",
+      "calc": {
+        "base": "seconds",
+        "rate": 10000000
+      },
+      "source_label": "U.S. Bureau of Engraving & Printing — How Money Is Made"
+    },
+    {
+      "cat": "💡 ไฟฟ้าเฉลี่ยจากเขื่อนฮูเวอร์",
+      "text": "ถ้าเขื่อนฮูเวอร์ผลิตไฟฟ้าตามค่าเฉลี่ย 4 พันล้านกิโลวัตต์-ชั่วโมงต่อปีตั้งแต่เช้าวันแรกของ ป.1 พลังงานสะสมจะเป็นประมาณ {value:0} กิโลวัตต์-ชั่วโมง",
+      "source": "https://www.usbr.gov/lc/hooverdam/faqs/powerfaq.html",
+      "calc": {
+        "base": "years",
+        "rate": 4000000000
+      },
+      "source_label": "U.S. Bureau of Reclamation — Hoover Dam FAQ"
+    },
+    {
+      "cat": "🖨️ เครื่องพิมพ์ LaserJet",
+      "text": "ถ้า HP LaserJet Enterprise MFP M528 พิมพ์ต่อเนื่องที่ 52 หน้า/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะพิมพ์ไปแล้วประมาณ {value:0} หน้า",
+      "source": "https://support.hp.com/us-en/document/c06321477",
+      "calc": {
+        "base": "days",
+        "rate": 74880
+      },
+      "source_label": "HP — LaserJet Enterprise MFP M528"
+    },
+    {
+      "cat": "🧵 จักรเย็บผ้า",
+      "text": "ถ้าจักร Brother ST150HDH เย็บต่อเนื่องที่ 850 ฝีเข็ม/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเย็บสะสมประมาณ {value:0} ฝีเข็ม",
+      "source": "https://www.brother-usa.com/products/st150hdh",
+      "calc": {
+        "base": "days",
+        "rate": 1224000
+      },
+      "source_label": "Brother — ST150HDH Sewing Machine"
+    },
+    {
+      "cat": "🏓 โต้ปิงปอง",
+      "text": "ถ้าโต้ปิงปองต่อเนื่องด้วยสถิติ 180 ครั้ง/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะโต้ลูกสะสมประมาณ {value:0} ครั้ง",
+      "source": "https://www.guinnessworldrecords.com/world-records/most-table-tennis-counter-hits-in-one-minute",
+      "calc": {
+        "base": "days",
+        "rate": 259200
+      },
+      "source_label": "Guinness World Records — Table Tennis Counter Hits"
+    },
+    {
+      "cat": "🪥 แปรงสีฟันไฟฟ้า",
+      "text": "ถ้าแปรง Philips Sonicare ทำงานต่อเนื่องที่ 62,000 การเคลื่อนไหว/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเคลื่อนไหวสะสมประมาณ {value:0} ครั้ง",
+      "source": "https://www.usa.philips.com/c-p/HX9911_90/diamondclean-9000-sonic-electric-toothbrush-with-app",
+      "calc": {
+        "base": "days",
+        "rate": 89280000
+      },
+      "source_label": "Philips — Sonicare DiamondClean 9000"
+    },
+    {
+      "cat": "🎹 เคาะคีย์เปียโน",
+      "text": "ถ้าเคาะคีย์เปียโนต่อเนื่องด้วยสถิติ 1,030 ครั้ง/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเคาะสะสมประมาณ {value:0} ครั้ง",
+      "source": "https://www.guinnessworldrecords.com/world-records/most-piano-key-hits-in-one-minute",
+      "calc": {
+        "base": "days",
+        "rate": 1483200
+      },
+      "source_label": "Guinness World Records — Piano Key Hits"
+    },
+    {
+      "cat": "🔄 รอบลำอนุภาค LHC",
+      "text": "ถ้าลำโปรตอนใน LHC วิ่ง 11,245 รอบ/วินาทีต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะครบรอบวงแหวนประมาณ {value:0} รอบ",
+      "source": "https://home.cern/science/accelerators/large-hadron-collider/",
+      "calc": {
+        "base": "seconds",
+        "rate": 11245
+      },
+      "source_label": "CERN — Large Hadron Collider"
+    },
+    {
+      "cat": "📡 โพรงเร่งอนุภาค LHC",
+      "text": "ถ้าโพรงเร่งอนุภาค LHC ทำงานต่อเนื่องที่ 400 เมกะเฮิรตซ์ตั้งแต่เช้าวันแรกของ ป.1 จะเกิดคาบคลื่นสะสมประมาณ {value:0} รอบ",
+      "source": "https://home.cern/science/accelerators/large-hadron-collider/",
+      "calc": {
+        "base": "seconds",
+        "rate": 400000000
+      },
+      "source_label": "CERN — Large Hadron Collider"
+    },
+    {
+      "cat": "🎥 กล้องสโลว์โมชัน",
+      "text": "ถ้ากล้อง Canon EOS R5 บันทึก 4K ต่อเนื่องที่ 120 เฟรม/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะได้ภาพประมาณ {value:0} เฟรม",
+      "source": "https://www.usa.canon.com/shop/p/eos-r5",
+      "calc": {
+        "base": "seconds",
+        "rate": 120
+      },
+      "source_label": "Canon — EOS R5"
+    },
+    {
+      "cat": "⌚ กลไกนาฬิกา Rolex",
+      "text": "ถ้ากลไก Rolex ที่ความถี่ 28,800 ครั้ง/ชม. เดินต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 ชุดควบคุมเวลาจะสั่นสะสมประมาณ {value:0} ครั้ง",
+      "source": "https://www.rolex.com/watchmaking/features/movements",
+      "calc": {
+        "base": "days",
+        "rate": 691200
+      },
+      "source_label": "Rolex — Watch Movements"
+    },
+    {
+      "cat": "💵 แท่นพิมพ์ธนบัตร",
+      "text": "ถ้าแท่นพิมพ์ธนบัตรสหรัฐฯ เดินต่อเนื่องที่ 10,000 แผ่น/ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะพิมพ์ได้ประมาณ {value:0} แผ่น",
+      "source": "https://www.bep.gov/currency/how-money-is-made",
+      "calc": {
+        "base": "days",
+        "rate": 240000
+      },
+      "source_label": "U.S. Bureau of Engraving & Printing — How Money Is Made"
+    },
+    {
+      "cat": "⚙️ เครื่องกำเนิดไฟฟ้า 60 เฮิรตซ์",
+      "text": "ถ้าเครื่องกำเนิดของเขื่อนฮูเวอร์ทำงานต่อเนื่องที่ 60 รอบไฟฟ้า/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะสร้างรอบไฟฟ้าประมาณ {value:0} รอบ",
+      "source": "https://www.usbr.gov/lc/hooverdam/faqs/powerfaq.html",
+      "calc": {
+        "base": "seconds",
+        "rate": 60
+      },
+      "source_label": "U.S. Bureau of Reclamation — Hoover Dam FAQ"
+    },
+    {
+      "cat": "🏭 ตรวจธนบัตรด้วยกล้อง",
+      "text": "ถ้าระบบ OCIS ตรวจธนบัตรต่อเนื่องที่ 2.5 แผ่น/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะตรวจไปแล้วประมาณ {value:0} แผ่น",
+      "source": "https://www.bep.gov/currency/how-money-is-made",
+      "calc": {
+        "base": "seconds",
+        "rate": 2.5
+      },
+      "source_label": "U.S. Bureau of Engraving & Printing — How Money Is Made"
+    },
+    {
+      "cat": "⚡ โรงไฟฟ้าเขื่อนฮูเวอร์",
+      "text": "ถ้าโรงไฟฟ้าเขื่อนฮูเวอร์ผลิตต่อเนื่องเต็มกำลัง 2,080 เมกะวัตต์ตั้งแต่เช้าวันแรกของ ป.1 พลังงานสะสมจะเป็นประมาณ {value:0} เมกะวัตต์-ชั่วโมง",
+      "source": "https://www.usbr.gov/lc/hooverdam/faqs/powerfaq.html",
+      "calc": {
+        "base": "days",
+        "rate": 49920
+      },
+      "source_label": "U.S. Bureau of Reclamation — Hoover Dam FAQ"
+    },
+    {
+      "cat": "🌬️ กังหัน Haliade-X",
+      "text": "ถ้ากังหันลม Haliade-X รุ่น 14 เมกะวัตต์ผลิตเต็มกำลังต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะให้พลังงานประมาณ {value:0} เมกะวัตต์-ชั่วโมง",
+      "source": "https://www.gevernova.com/wind-power/offshore-wind/haliade-x-offshore-turbine",
+      "calc": {
+        "base": "days",
+        "rate": 336
+      },
+      "source_label": "Gevernova — gevernova.com"
+    },
+    {
+      "cat": "🧮 ซูเปอร์คอมพิวเตอร์ Frontier",
+      "text": "ถ้า Frontier คำนวณต่อเนื่องที่ 1.194 เอกซาฟลอปส์ตั้งแต่เช้าวันแรกของ ป.1 จะทำการคำนวณสะสมประมาณ {value:0} ล้านล้านล้านครั้ง",
+      "source": "https://www.olcf.ornl.gov/frontier/",
+      "calc": {
+        "base": "seconds",
+        "rate": 1.194
+      },
+      "source_label": "Ornl — olcf.ornl.gov"
+    },
+    {
+      "cat": "⚙️ การชนใน LHC",
+      "text": "ถ้าเครื่องตรวจจับ ATLAS และ CMS รับการชนต่อเนื่องที่ 1.5 พันล้านครั้ง/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะมีการชนสะสมประมาณ {value:0} ครั้ง",
+      "source": "https://home.cern/science/accelerators/large-hadron-collider/",
+      "calc": {
+        "base": "seconds",
+        "rate": 1500000000
+      },
+      "source_label": "CERN — Large Hadron Collider"
+    },
+    {
+      "cat": "🔌 USB4",
+      "text": "ถ้า USB4 ส่งข้อมูลต่อเนื่องที่ 40 กิกะบิต/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งข้อมูลได้ประมาณ {value:0} กิกะไบต์",
+      "source": "https://www.usb.org/usb4",
+      "calc": {
+        "base": "seconds",
+        "rate": 5
+      },
+      "source_label": "USB-IF — USB4 Specification"
+    },
+    {
+      "cat": "🔗 HDMI 2.2",
+      "text": "ถ้า HDMI 2.2 ส่งข้อมูลต่อเนื่องเต็มแบนด์วิดท์ 96 กิกะบิต/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งข้อมูลประมาณ {value:0} กิกะไบต์",
+      "source": "https://www.hdmi.org/spec21sub/eightk60_fourk120",
+      "calc": {
+        "base": "seconds",
+        "rate": 12
+      },
+      "source_label": "HDMI Forum — HDMI 2.2"
+    },
+    {
+      "cat": "🌐 400 Gigabit Ethernet",
+      "text": "ถ้าเครือข่าย 400GbE ส่งข้อมูลต่อเนื่องเต็มอัตราตั้งแต่เช้าวันแรกของ ป.1 จะส่งข้อมูลสะสมประมาณ {value:0} กิกะไบต์",
+      "source": "https://standards.ieee.org/standard/802_3bs-2017.html",
+      "calc": {
+        "base": "seconds",
+        "rate": 50
+      },
+      "source_label": "IEEE — 802.3bs Standard (400GbE)"
+    },
+    {
+      "cat": "📶 Wi-Fi 7",
+      "text": "ถ้า Wi-Fi 7 ส่งข้อมูลต่อเนื่องที่อัตราสูงสุดเชิงทฤษฎี 46 กิกะบิต/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งได้ประมาณ {value:0} กิกะไบต์",
+      "source": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7",
+      "calc": {
+        "base": "seconds",
+        "rate": 5.75
+      },
+      "source_label": "Wi-Fi Alliance — Wi-Fi CERTIFIED 7"
+    },
+    {
+      "cat": "🟦 Bluetooth LE",
+      "text": "ถ้า Bluetooth LE ส่งข้อมูลต่อเนื่องด้วย PHY 2 เมกะบิต/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งข้อมูลได้ประมาณ {value:0} เมกะไบต์",
+      "source": "https://www.bluetooth.com/learn-about-bluetooth/tech-overview/",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.25
+      },
+      "source_label": "Bluetooth SIG — Technology Overview"
+    },
+    {
+      "cat": "📻 รหัสมอร์ส",
+      "text": "ถ้าส่งรหัสมอร์สต่อเนื่องด้วยความเร็วมาตรฐานทดสอบ 20 คำ/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งได้ประมาณ {value:0} คำ",
+      "source": "https://www.arrl.org/files/file/Technology/x9004008.pdf",
+      "calc": {
+        "base": "days",
+        "rate": 28800
+      },
+      "source_label": "ARRL — Morse Code Proficiency"
+    },
+    {
+      "cat": "💿 แผ่นเสียง 33⅓ RPM",
+      "text": "ถ้าแผ่นเสียง LP หมุนต่อเนื่องที่ 33⅓ รอบ/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะหมุนสะสมประมาณ {value:0} รอบ",
+      "source": "https://www.loc.gov/preservation/scientists/projects/record_playback.html",
+      "calc": {
+        "base": "days",
+        "rate": 48000
+      },
+      "source_label": "Library of Congress — Record Playback"
+    },
+    {
+      "cat": "🎧 เสียงดิจิทัลจาก CD",
+      "text": "ถ้าช่องเสียงหนึ่งช่องของ CD ถูกสุ่มตัวอย่างต่อเนื่องที่ 44,100 ครั้ง/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะมีตัวอย่างเสียงประมาณ {value:0} ตัวอย่าง",
+      "source": "https://www.philips.com/a-w/research/technologies/cd/beginning.html",
+      "calc": {
+        "base": "seconds",
+        "rate": 44100
+      },
+      "source_label": "Philips — Compact Disc Technology"
+    },
+    {
+      "cat": "🎼 เมโทรนอม",
+      "text": "ถ้าเมโทรนอมเดินต่อเนื่องที่ 120 จังหวะ/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเคาะสะสมประมาณ {value:0} จังหวะ",
+      "source": "https://hub.yamaha.com/keyboards/k-how-to/how-to-use-a-metronome/",
+      "calc": {
+        "base": "days",
+        "rate": 172800
+      },
+      "source_label": "Yamaha — How to Use a Metronome"
+    },
+    {
+      "cat": "🎵 โน้ตมาตรฐาน A4",
+      "text": "ถ้าโทนมาตรฐาน A4 ที่ 440 เฮิรตซ์สั่นต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะสั่นสะสมประมาณ {value:0} รอบ",
+      "source": "https://www.iso.org/standard/3601.html",
+      "calc": {
+        "base": "seconds",
+        "rate": 440
+      },
+      "source_label": "ISO — ISO 16:1975 (Standard Tuning A4=440 Hz)"
+    },
+    {
+      "cat": "🎾 ลูกเสิร์ฟเทนนิส",
+      "text": "ถ้าลูกเทนนิสเคลื่อนต่อเนื่องด้วยสถิติเสิร์ฟ 263 กม./ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะเดินทางได้ประมาณ {value:0} กม.",
+      "source": "https://www.guinnessworldrecords.com/world-records/fastest-tennis-serve-(male)",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.07305555555555555
+      },
+      "source_label": "Guinness World Records — Fastest Tennis Serve"
+    },
+    {
+      "cat": "🏸 ลูกตบแบดมินตัน",
+      "text": "ถ้าลูกขนไก่เคลื่อนต่อเนื่องด้วยสถิติความเร็ว 565 กม./ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะเดินทางได้ประมาณ {value:0} กม.",
+      "source": "https://www.guinnessworldrecords.com/world-records/fastest-badminton-hit-in-competition-male",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.15694444444444444
+      },
+      "source_label": "Guinness World Records — Fastest Badminton Hit"
+    },
+    {
+      "cat": "🏃 วิ่ง 100 เมตร",
+      "text": "ถ้าวิ่งต่อเนื่องด้วยเพซสถิติโลก 100 เมตรชาย 9.58 วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะวิ่งได้ประมาณ {value:0} เมตร",
+      "source": "https://worldathletics.org/records/by-category/world-records",
+      "calc": {
+        "base": "seconds",
+        "rate": 10.438413361169102
+      },
+      "source_label": "World Athletics — World Records"
+    },
+    {
+      "cat": "🚴 จักรยานหลังรถลาก",
+      "text": "ถ้าจักรยานรักษาสถิติความเร็ว 296.009 กม./ชม. ต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะปั่นได้ประมาณ {value:0} กม.",
+      "source": "https://www.guinnessworldrecords.com/world-records/fastest-bicycle-speed-in-slipstream-(female)",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.08222472222222223
+      },
+      "source_label": "Guinness World Records — Fastest Bicycle Speed"
+    },
+    {
+      "cat": "🪢 กระโดดเชือก",
+      "text": "ถ้ากระโดดเชือกต่อเนื่องด้วยสถิติ 246 ครั้งใน 30 วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะกระโดดสะสมประมาณ {value:0} ครั้ง",
+      "source": "https://www.guinnessworldrecords.com/world-records/most-skips-in-30-seconds",
+      "calc": {
+        "base": "seconds",
+        "rate": 8.2
+      },
+      "source_label": "Guinness World Records — Most Skips in 30 Seconds"
+    },
+    {
+      "cat": "🏀 เลี้ยงบาสเกตบอล",
+      "text": "ถ้าเลี้ยงลูกบาสต่อเนื่องด้วยสถิติ 708 ครั้ง/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเดาะลูกสะสมประมาณ {value:0} ครั้ง",
+      "source": "https://www.guinnessworldrecords.com/world-records/most-basketball-bounces-in-one-minute",
+      "calc": {
+        "base": "days",
+        "rate": 1019520
+      },
+      "source_label": "Guinness World Records — Basketball Bounces"
+    },
+    {
+      "cat": "🏊 ฟรีสไตล์ 50 เมตร",
+      "text": "ถ้าว่ายต่อเนื่องด้วยเพซสถิติโลกฟรีสไตล์ 50 เมตรชาย 20.91 วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะว่ายได้ประมาณ {value:0} เมตร",
+      "source": "https://www.worldaquatics.com/swimming/records",
+      "calc": {
+        "base": "seconds",
+        "rate": 2.391200382592061
+      },
+      "source_label": "World Aquatics — Swimming Records"
+    },
+    {
+      "cat": "⛸️ สปีดสเกต",
+      "text": "ถ้านักสปีดสเกตรักษาสถิติความเร็ว 103 กม./ชม. ต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะไถลได้ประมาณ {value:0} กม.",
+      "source": "https://www.guinnessworldrecords.com/world-records/fastest-speed-on-ice-skates",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.02861111111111111
+      },
+      "source_label": "Guinness World Records — Fastest Speed on Ice Skates"
+    },
+    {
+      "cat": "🎬 ฟิล์มภาพยนตร์ 24 FPS",
+      "text": "ถ้ากล้องฟิล์มเดินต่อเนื่องที่มาตรฐานเสียงภาพยนตร์ 24 เฟรม/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะบันทึกได้ประมาณ {value:0} เฟรม",
+      "source": "https://www.oscars.org/science-technology/sci-tech-projects/motion-picture-film",
+      "calc": {
+        "base": "seconds",
+        "rate": 24
+      },
+      "source_label": "Academy of Motion Pictures — Film Technology"
+    }
+  ]
+}
