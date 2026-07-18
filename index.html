@@ -929,29 +929,12 @@ setInterval(tick,50);
   const esNow=()=>(Date.now()-START)/1000;      // วินาทีที่ผ่านไปจริง
   const dNow =()=>esNow()/86400;                 // วัน
   const yNow =()=>dNow()/365.2425;               // ปี
-  const V1_EPOCH=Date.parse('2026-03-01T00:00:00Z'); // Voyager 1 — สูตรเดียวกับฉาก 3D
+  const TERMINATION_SHOCK_DATE = Date.parse('2004-12-15T00:00:00Z'); // Voyager 1 — สูตรเดียวกับฉาก 3D
   const VALUES={
     days:        ()=>dNow(),
     years:       ()=>yNow(),
     seconds_m:   ()=>esNow()/1e6,
-    heartbeats_m:()=>esNow()/60*70/1e6,          // 70 ครั้ง/นาที
-    breaths_m:   ()=>esNow()/60*16/1e6,          // 16 ครั้ง/นาที
-    blinks_m:    ()=>esNow()/60*15*2/3/1e6,      // 15 ครั้ง/นาที × ตื่น 2/3 ของวัน
-    hair_m:      ()=>dNow()/30.44*1.25/100,      // 1.25 ซม./เดือน
-    nails_cm:    ()=>dNow()/30.44*3.5/10,        // 3.5 มม./เดือน
-    sleep_y:     ()=>yNow()/3,                   // นอนวันละ 8 ชม.
-    meals:       ()=>dNow()*3,
-    movies:      ()=>esNow()/7200,               // เรื่องละ 2 ชม.
-    songs_m:     ()=>esNow()/210/1e6,            // เพลงละ 3.5 นาที
-    steps_m:     ()=>dNow()*7500/1e6,
-    steps_km:    ()=>dNow()*7500*0.7/1000,       // ก้าวละ 0.7 ม.
-    skin_cycles: ()=>dNow()/28,
-    butterflies: ()=>dNow()/14,
-    bamboo_km:   ()=>dNow()*0.9/1000,            // 90 ซม./วัน
-    plates_cm:   ()=>yNow()*5,
-    everest_mm:  ()=>yNow()*4,
-    tortoise_pct:()=>yNow()/170*100,
-    voyager_au:  ()=>172.59+3.6*((Date.now()-V1_EPOCH)/(365.2425*864e5)),
+    voyager_au:  ()=>94+(3.6*((Date.now()-TERMINATION_SHOCK_DATE)/(365.2425 * 864e5))),
   };
   const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const hasLive=t=>/\{[a-z_]+(?::\d)?\}/.test(t);
@@ -1029,11 +1012,9 @@ setInterval(tick,50);
     {id:'neptune', n:'เนปจูน',  au:30.070,r:3.8, c:0x4A7B8D},
     {id:'pluto',   n:'พลูโต',   au:39.482,r:1.0, c:0xDEC5DA},
   ];
-  /* ---------- Voyager 1 (real-time, extrapolated) ----------
-     อ้างอิง: NASA Voyager Fast Facts — อัตราเร็ว ~3.6 AU/ปี; ระยะ ณ มี.ค. 2026 ~172.59 AU จากดวงอาทิตย์ */
-  const V1_EPOCH=new Date('2026-03-01T00:00:00Z').getTime();
-  const V1_EPOCH_AU=172.59, V1_AU_PER_YEAR=3.6, V1_MS_PER_YEAR=365.2425*86400*1000;
-  const voyagerSolarAu=(t=Date.now())=>V1_EPOCH_AU+V1_AU_PER_YEAR*((t-V1_EPOCH)/V1_MS_PER_YEAR);
+  /* ---------- Voyager 1 (real-time, extrapolated) ---------- */
+  const TERMINATION_SHOCK_DATE = Date.parse('2004-12-15T00:00:00Z');
+  const voyagerSolarAu=(t=Date.now())=>94+(3.6*((t-TERMINATION_SHOCK_DATE)/(365.2425 * 864e5)));
 
   /* ---------- renderer / scene / camera ---------- */
   const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});

@@ -5,20 +5,28 @@
     "ใน text ใช้ {ชื่อค่า} หรือ {ชื่อค่า:จำนวนทศนิยม} เพื่อแทรกตัวเลขสดได้",
     "แต่ละข้ออาจมี calc โดย calc.base กำหนดหน่วยเวลาที่ผ่านไปเป็น seconds, days หรือ years และ calc.rate ใช้คูณจำนวนหน่วยเวลาที่ผ่านไป",
     "ใช้ {value:d} เพื่อแสดงผลลัพธ์จาก calc โดย d คือจำนวนตำแหน่งทศนิยม",
-    "ค่าที่ใช้ได้: days, years, seconds_m, heartbeats_m, breaths_m, blinks_m, hair_m, nails_cm, sleep_y, meals, movies, songs_m, steps_m, steps_km, skin_cycles, butterflies, bamboo_km, plates_cm, everest_mm, tortoise_pct, voyager_au"
+    "ค่าที่ใช้ได้: days, years, seconds_m, voyager_au"
   ],
   "facts": [
     {
       "cat": "💓 หัวใจ",
-      "text": "หากสมมติว่าหัวใจเต้นเฉลี่ย 70 ครั้งต่อนาที นับจากเช้าวันแรกของ ป.1 หัวใจจะเต้นมาแล้วประมาณ {heartbeats_m:1} ล้านครั้ง",
-      "source": "https://www.nhlbi.nih.gov/health/heart",
-      "source_label": "NIH/NHLBI — How the Heart Works"
+      "text": "หากหัวใจเต้นตามค่าเฉลี่ยขณะพัก 75 ครั้งต่อนาที นับจากเช้าวันแรกของ ป.1 หัวใจจะเต้นมาแล้วประมาณ {value:0} ครั้ง",
+      "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-4-cardiac-physiology",
+      "source_label": "OpenStax — Anatomy & Physiology 2e, Ch.19.4",
+      "calc": {
+        "base": "seconds",
+        "rate": 1.25
+      }
     },
     {
       "cat": "😴 การนอน",
-      "text": "หากนอนเฉลี่ยวันละ 8 ชั่วโมง เวลาที่หลับตั้งแต่วันแรกของ ป.1 จะรวมกันราว {sleep_y:1} ปี",
+      "text": "หากนอนวันละ 9 ชั่วโมง ซึ่งอยู่ในช่วงเวลานอนที่แนะนำตั้งแต่วัยเรียนถึงวัยผู้ใหญ่ เวลาที่หลับตั้งแต่วันแรกของ ป.1 จะรวมกันราว {value:2} ปี",
       "source": "https://www.nhlbi.nih.gov/health/sleep/how-much-sleep",
-      "source_label": "NIH/NHLBI — How Much Sleep Is Enough?"
+      "source_label": "NIH/NHLBI — How Much Sleep Is Enough?",
+      "calc": {
+        "base": "days",
+        "rate": 0.001026694045174538
+      }
     },
     {
       "cat": "💡 ความเร็วแสง",
@@ -32,15 +40,23 @@
     },
     {
       "cat": "💇 เส้นผม",
-      "text": "หากสมมติว่าผมยาวเดือนละ 1.25 ซม. และไม่เคยตัดตั้งแต่ ป.1 ตอนนี้จะยาวประมาณ {hair_m:1} เมตร",
-      "source": "https://www.aad.org/public/diseases/hair-loss/insider/shedding",
-      "source_label": "American Academy of Dermatology — Hair Shedding"
+      "text": "หากผมยาวตามอัตราประมาณครึ่งนิ้วหรือ 1.27 เซนติเมตรต่อเดือน และไม่เคยตัดตั้งแต่ ป.1 ตอนนี้จะยาวประมาณ {value:2} เมตร",
+      "source": "https://medlineplus.gov/hairproblems.html",
+      "source_label": "MedlinePlus — Hair Problems",
+      "calc": {
+        "base": "years",
+        "rate": 0.1524
+      }
     },
     {
       "cat": "👁️ การกะพริบตา",
-      "text": "หากกะพริบตา 15 ครั้งต่อนาทีในช่วงที่ตื่นสองในสามของวัน ตั้งแต่ ป.1 จะกะพริบไปประมาณ {blinks_m} ล้านครั้ง",
+      "text": "หากกะพริบตา 15 ครั้งต่อนาที ซึ่งอยู่ในช่วง 14–17 ครั้งต่อนาทีที่แหล่งข้อมูลระบุสำหรับผู้ใหญ่ และตื่นวันละ 16 ชั่วโมง ตั้งแต่ ป.1 จะกะพริบไปประมาณ {value:1} ล้านครั้ง",
       "source": "https://my.clevelandclinic.org/health/articles/blinking",
-      "source_label": "Cleveland Clinic — Blinking"
+      "source_label": "Cleveland Clinic — Blinking",
+      "calc": {
+        "base": "days",
+        "rate": 0.0144
+      }
     },
     {
       "cat": "🪐 ดาวเสาร์",
@@ -64,9 +80,13 @@
     },
     {
       "cat": "🍚 มื้ออาหาร",
-      "text": "หากกินวันละ 3 มื้อทุกวัน ตั้งแต่วันแรกของ ป.1 ถึงวันนี้จะรวมประมาณ {meals} มื้อ",
-      "source": "https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/healthy-eating-and-blood-sugar/",
-      "source_label": "NHS — Healthy Eating Guidelines"
+      "text": "หากกินวันละ 3 มื้อทุกวัน ตั้งแต่วันแรกของ ป.1 ถึงวันนี้จะรวมประมาณ {value:0} มื้อ",
+      "source": "https://www.uclh.nhs.uk/patients-and-visitors/patient-information-pages/managing-mealtimes-using-your-hybrid-closed-loop-system",
+      "source_label": "UCLH NHS — Managing Mealtimes",
+      "calc": {
+        "base": "days",
+        "rate": 3
+      }
     },
     {
       "cat": "☿️ ดาวพุธ",
@@ -80,9 +100,13 @@
     },
     {
       "cat": "👣 ก้าวเดิน",
-      "text": "หากเดินเฉลี่ยวันละ 7,500 ก้าว ตั้งแต่ ป.1 จะรวมประมาณ {steps_m:1} ล้านก้าว หรือราว {steps_km} กม. เมื่อคิดก้าวละ 0.7 เมตร",
+      "text": "หากใช้สมมติฐาน 7,500 ก้าวต่อวัน ซึ่งเป็นระดับที่งานศึกษาหนึ่งพบว่าความสัมพันธ์กับอัตราตายในหญิงสูงอายุเริ่มคงที่ ตั้งแต่ ป.1 จะรวมประมาณ {value:1} ล้านก้าว",
       "source": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2734709",
-      "source_label": "JAMA Internal Medicine — Daily Step Count & Mortality"
+      "source_label": "JAMA Internal Medicine — Daily Step Count & Mortality",
+      "calc": {
+        "base": "days",
+        "rate": 0.0075
+      }
     },
     {
       "cat": "♀️ ดาวศุกร์",
@@ -96,15 +120,23 @@
     },
     {
       "cat": "🫁 ลมหายใจ",
-      "text": "หากหายใจเฉลี่ย 16 ครั้งต่อนาที ตั้งแต่วันแรกของ ป.1 จะหายใจไปประมาณ {breaths_m:1} ล้านครั้ง",
-      "source": "https://www.nhlbi.nih.gov/health/lungs",
-      "source_label": "NIH/NHLBI — How the Lungs Work"
+      "text": "หากใช้ 12 ครั้งต่อนาที ซึ่งเป็นขอบล่างของช่วงอัตราหายใจปกติขณะพักสำหรับผู้ใหญ่ ตั้งแต่วันแรกของ ป.1 จะหายใจไปประมาณ {value:1} ล้านครั้ง",
+      "source": "https://medlineplus.gov/ency/article/002341.htm",
+      "source_label": "MedlinePlus — Vital Signs",
+      "calc": {
+        "base": "seconds",
+        "rate": 2e-07
+      }
     },
     {
-      "cat": "🎬 ภาพยนตร์",
-      "text": "หากเปิดภาพยนตร์ยาวเรื่องละ 2 ชั่วโมงต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 ถึงตอนนี้ จะดูจบประมาณ {movies} เรื่อง",
+      "cat": "⏳ ช่วงเวลา 2 ชั่วโมง",
+      "text": "หากแบ่งเวลาที่ผ่านมาตั้งแต่เช้าวันแรกของ ป.1 เป็นช่วงละ 2 ชั่วโมง จะได้ประมาณ {value:0} ช่วง",
       "source": "https://www.nist.gov/pml/owm/si-units-time",
-      "source_label": "NIST — SI Units: Time"
+      "source_label": "NIST — SI Units: Time",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.0001388888888888889
+      }
     },
     {
       "cat": "♂️ ดาวอังคาร",
@@ -148,9 +180,13 @@
     },
     {
       "cat": "💅 เล็บมือ",
-      "text": "หากเล็บยาวเฉลี่ยเดือนละ 3.5 มม. และไม่เคยตัดตั้งแต่ ป.1 ตอนนี้จะยาวประมาณ {nails_cm} ซม.",
+      "text": "หากเล็บมือยาวเฉลี่ยเดือนละ 3 มิลลิเมตรและไม่เคยตัดตั้งแต่ ป.1 ตอนนี้จะยาวประมาณ {value:2} เซนติเมตร",
       "source": "https://www.ncbi.nlm.nih.gov/books/NBK513133/",
-      "source_label": "NCBI — Nail Growth Physiology"
+      "source_label": "NCBI — Nail Growth Physiology",
+      "calc": {
+        "base": "years",
+        "rate": 3.6
+      }
     },
     {
       "cat": "♅ ดาวยูเรนัส",
@@ -163,10 +199,14 @@
       "source_label": "NASA Science — Uranus Facts"
     },
     {
-      "cat": "🎵 เสียงเพลง",
-      "text": "หากฟังเพลงยาวเฉลี่ย 3.5 นาทีต่อเนื่องตั้งแต่วันแรกของ ป.1 จะฟังจบประมาณ {songs_m:2} ล้านเพลง",
+      "cat": "⏳ ช่วงเวลา 3.5 นาที",
+      "text": "หากแบ่งเวลาที่ผ่านมาตั้งแต่วันแรกของ ป.1 เป็นช่วงละ 3.5 นาที จะได้ประมาณ {value:0} ช่วง",
       "source": "https://www.nist.gov/pml/owm/si-units-time",
-      "source_label": "NIST — SI Units: Time"
+      "source_label": "NIST — SI Units: Time",
+      "calc": {
+        "base": "seconds",
+        "rate": 0.004761904761904762
+      }
     },
     {
       "cat": "⏱️ วินาที",
@@ -196,9 +236,9 @@
     },
     {
       "cat": "🛰️ วอยเอเจอร์ 1",
-      "text": "วอยเอเจอร์ 1 ถูกส่งขึ้นในปี 1977 ปัจจุบันอยู่ห่างดวงอาทิตย์ราว {voyager_au:1} AU และเคลื่อนออกไปประมาณ 3.6 AU ต่อปี",
-      "source": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
-      "source_label": "NASA — Where Are Voyager 1 and 2 Now?"
+      "text": "วอยเอเจอร์ 1 ถูกส่งขึ้นในปี 1977 และหน้าติดตามของ NASA แสดงว่าปัจจุบันอยู่ห่างดวงอาทิตย์ราว {voyager_au:1} AU",
+      "source": "https://science.nasa.gov/mission/voyager/fast-facts/",
+      "source_label": "NASA — 7 Things to Know About Voyager"
     },
     {
       "cat": "🛰️ สถานีอวกาศ",
@@ -398,7 +438,7 @@
         "base": "days",
         "rate": 330000
       },
-      "source_label": "Sender & Milo, Nature Medicine (2020) — Cellular Turnover"
+      "source_label": "Sender & Milo, Nature Medicine (2021) — Cellular Turnover"
     },
     {
       "cat": "⚖️ มวลเซลล์ที่ผลัดเปลี่ยน",
@@ -408,267 +448,267 @@
         "base": "days",
         "rate": 80
       },
-      "source_label": "Sender & Milo, Nature Medicine (2020) — Cellular Turnover"
+      "source_label": "Sender & Milo, Nature Medicine (2021) — Cellular Turnover"
     },
     {
       "cat": "🩸 เม็ดเลือดแดงชุดใหม่",
       "text": "ชุดข้อมูล cellular turnover ประเมินการผลัดเปลี่ยนเม็ดเลือดแดงราว 214,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 214000
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🛡️ นิวโทรฟิล",
       "text": "ร่างกายผู้ใหญ่มาตรฐานผลัดเปลี่ยนนิวโทรฟิลราว 60,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 60000
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🛡️ ไทโมไซต์",
       "text": "ไทโมไซต์ในต่อมไทมัสผลัดเปลี่ยนราว 610 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 610
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🛡️ ทีเซลล์โตเต็มวัย",
       "text": "ทีเซลล์โตเต็มวัยผลัดเปลี่ยนราว 2,200 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 2200
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🛡️ เซลล์ต้นกำเนิดบีเซลล์",
       "text": "เซลล์ต้นกำเนิดของบีเซลล์ผลัดเปลี่ยนราว 6,600 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 6600
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🛡️ บีเซลล์ระยะเปลี่ยนผ่าน",
       "text": "บีเซลล์ระยะเปลี่ยนผ่านผลัดเปลี่ยนราว 290 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 290
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🛡️ บีเซลล์โตเต็มวัย",
       "text": "บีเซลล์โตเต็มวัยผลัดเปลี่ยนราว 5,100 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 5100
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🛡️ โมโนไซต์",
       "text": "โมโนไซต์ผลัดเปลี่ยนราว 1,520 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 1520
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🍽️ เยื่อบุกระเพาะอาหาร",
       "text": "เซลล์เยื่อบุกระเพาะอาหารผลัดเปลี่ยนราว 1,300 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 1300
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🍽️ เยื่อบุลำไส้เล็ก",
       "text": "เซลล์เยื่อบุลำไส้เล็กผลัดเปลี่ยนราว 22,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 22000
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🍽️ เยื่อบุลำไส้ใหญ่",
       "text": "เซลล์เยื่อบุลำไส้ใหญ่ผลัดเปลี่ยนราว 17,000 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 17000
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🧴 เซลล์หนังกำพร้า",
       "text": "เซลล์หนังกำพร้าผลัดเปลี่ยนราว 3,700 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 3700
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🧴 ไฟโบรบลาสต์ผิวหนัง",
       "text": "ไฟโบรบลาสต์ในชั้นหนังแท้ผลัดเปลี่ยนราว 270 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 270
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🩹 เซลล์บุหลอดเลือด",
       "text": "เซลล์บุผนังหลอดเลือดผลัดเปลี่ยนราว 240 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 240
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🫁 เยื่อบุถุงลม",
       "text": "เซลล์เยื่อบุถุงลมปอดผลัดเปลี่ยนราว 3,500 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 3500
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🫁 แมโครฟาจในถุงลม",
       "text": "แมโครฟาจในถุงลมปอดผลัดเปลี่ยนราว 180 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 180
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🫁 เยื่อบุหลอดลม",
       "text": "เซลล์เยื่อบุหลอดลมผลัดเปลี่ยนราว 75 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 75
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🫁 เซลล์คั่นระหว่างเนื้อปอด",
       "text": "เซลล์คั่นระหว่างเนื้อปอดผลัดเปลี่ยนราว 3,100 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 3100
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🟡 เซลล์ไขมัน",
       "text": "เซลล์ไขมันผลัดเปลี่ยนราว 8 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 8
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "💪 เซลล์กล้ามเนื้อลาย",
       "text": "เซลล์กล้ามเนื้อลายผลัดเปลี่ยนราว 13,000 เซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} เซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 13000
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "❤️ เซลล์กล้ามเนื้อหัวใจ",
       "text": "เซลล์กล้ามเนื้อหัวใจผลัดเปลี่ยนราว 57,000 เซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} เซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 57000
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🧠 เซลล์ประสาท",
       "text": "แบบจำลอง cellular turnover ประเมินการผลัดเปลี่ยนเซลล์ประสาทราว 300,000 เซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} เซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 300000
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🧠 เซลล์เกลีย",
       "text": "เซลล์เกลียในระบบประสาทผลัดเปลี่ยนราว 3.1 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:1} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 3.1
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🟤 เซลล์ตับ",
       "text": "เซลล์ตับหรือ hepatocyte ผลัดเปลี่ยนราว 640 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 640
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🟤 คุพเฟอร์เซลล์",
       "text": "คุพเฟอร์เซลล์ซึ่งเป็นแมโครฟาจประจำตับผลัดเปลี่ยนราว 68 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 68
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🟤 สเตลเลตเซลล์ตับ",
       "text": "สเตลเลตเซลล์ในตับผลัดเปลี่ยนราว 480 ล้านเซลล์ต่อวัน นับจากเช้าวันแรกของ ป.1 จึงรวมประมาณ {value:0} ล้านเซลล์",
-      "source": "https://github.com/milo-lab/cellular_turnover/blob/master/Summary.xlsx",
+      "source": "https://github.com/milo-lab/cellular_turnover/raw/refs/heads/master/Summary.xlsx",
       "calc": {
         "base": "days",
         "rate": 480
       },
-      "source_label": "Milo Lab — Cellular Turnover Dataset"
+      "source_label": "Milo Lab — Cellular Turnover Summary.xlsx"
     },
     {
       "cat": "🫘 เลือดที่ไตกรอง",
@@ -812,11 +852,11 @@
     },
     {
       "cat": "🚽 มวลอุจจาระ",
-      "text": "งานทบทวนรายงานว่าผู้ใหญ่ขับอุจจาระเปียกเฉลี่ยอย่างน้อย 100 กรัมต่อวัน หากใช้อัตราต่ำสุด นับจากเช้าวันแรกของ ป.1 จะรวมประมาณ {value:0} กรัม",
-      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4991899/",
+      "text": "งานทบทวนรายงานค่ามัธยฐานของมวลอุจจาระเปียกที่ 128 กรัมต่อคนต่อวัน นับจากเช้าวันแรกของ ป.1 จะรวมประมาณ {value:0} กรัม",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4500995/",
       "calc": {
         "base": "days",
-        "rate": 100
+        "rate": 128
       },
       "source_label": "Rose et al., Crit. Rev. Env. Sci. Tech. (2015)"
     },
@@ -832,23 +872,23 @@
     },
     {
       "cat": "🪸 ปะการังก้อนโตช้า",
-      "text": "ปะการังชนิดก้อนโตอย่างน้อยราว 0.3 เซนติเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงเพิ่มความสูงตามขอบล่างได้ {value:5} เซนติเมตร",
-      "source": "https://floridakeys.noaa.gov/corals/coralgrowth.html",
+      "text": "ปะการังชนิดก้อนโตเติบโตประมาณ 0.3–2 เซนติเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 การเติบโตตามขอบล่าง 0.3 เซนติเมตรต่อปีคือ {value:5} เซนติเมตร",
+      "source": "https://oceanservice.noaa.gov/education/tutorial_corals/coral04_reefs.html",
       "calc": {
         "base": "years",
         "rate": 0.3
       },
-      "source_label": "NOAA Florida Keys — Coral Growth Rates"
+      "source_label": "NOAA Ocean Service — Coral Reef Formation"
     },
     {
       "cat": "🪸 ปะการังกิ่งโตเร็ว",
       "text": "ปะการังแตกกิ่งบางชนิดยืดได้ถึง 10 เซนติเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 การเติบโตตามอัตราสูงสุดคือ {value:5} เซนติเมตร",
-      "source": "https://floridakeys.noaa.gov/corals/coralgrowth.html",
+      "source": "https://oceanservice.noaa.gov/education/tutorial_corals/coral04_reefs.html",
       "calc": {
         "base": "years",
         "rate": 10
       },
-      "source_label": "NOAA Florida Keys — Coral Growth Rates"
+      "source_label": "NOAA Ocean Service — Coral Reef Formation"
     },
     {
       "cat": "🌳 วงปีของต้นไม้",
@@ -863,12 +903,12 @@
     {
       "cat": "🌱 เถาคุดซู",
       "text": "ช่วงที่เติบโตเต็มที่ เถาคุดซูยืดได้ถึงหนึ่งฟุตต่อวัน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ระยะที่ยืดตามอัตราสูงสุดคือ {value:2} ฟุต",
-      "source": "https://www.invasivespeciesinfo.gov/terrestrial/plants/kudzu",
+      "source": "https://research.fs.usda.gov/feis/species-reviews/puemonl",
       "calc": {
         "base": "days",
         "rate": 1
       },
-      "source_label": "USDA — Kudzu Invasive Species"
+      "source_label": "US Forest Service — Kudzu Species Review"
     },
     {
       "cat": "🌺 วันบานของบุกยักษ์",
@@ -882,13 +922,13 @@
     },
     {
       "cat": "🌲 เนื้อไม้ซีคัวยายักษ์",
-      "text": "ซีคัวยายักษ์ต้นโตสามารถสร้างเนื้อไม้มากกว่าหนึ่งลูกบาศก์หลาต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงสร้างอย่างน้อย {value:5} ลูกบาศก์หลา",
-      "source": "https://www.nps.gov/seki/learn/nature/bigtrees.htm",
+      "text": "ซีคัวยายักษ์ต้นใหญ่สร้างเนื้อไม้ประมาณ 40 ลูกบาศก์ฟุต หรือราว 1.48 ลูกบาศก์หลาต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงสร้างประมาณ {value:5} ลูกบาศก์หลา",
+      "source": "https://home.nps.gov/seki/learn/nature/largest-trees-in-world.htm",
       "calc": {
         "base": "years",
-        "rate": 1
+        "rate": 1.4814814814814814
       },
-      "source_label": "National Park Service — Giant Sequoias"
+      "source_label": "National Park Service — The Largest Trees in the World"
     },
     {
       "cat": "🌺 บุกยักษ์ออกดอก",
@@ -1003,32 +1043,28 @@
     {
       "cat": "🦪 หอยนางรมกรองน้ำ",
       "text": "หอยนางรมโตเต็มวัยกรองน้ำได้ถึง 50 แกลลอนต่อวันในสภาพเหมาะสม ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรตามอัตราสูงสุดคือ {value:0} แกลลอน",
-      "source": "https://www.chesapeakebay.net/discover/field-guide/entry/eastern-oyster",
+      "source": "https://www.fisheries.noaa.gov/national/habitat-conservation/oyster-reef-habitat",
       "calc": {
         "base": "days",
         "rate": 50
       },
-      "source_label": "Chesapeake Bay Program — Eastern Oyster"
+      "source_label": "NOAA Fisheries — Oyster Reef Habitat"
     },
     {
       "cat": "🦪 หอยนางรมสร้างไข่",
-      "text": "หอยนางรมตะวันออกเพศเมียสร้างไข่ได้ราว 100 ล้านฟองต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามอัตรานี้คือ {value:0} ฟอง",
-      "source": "https://www.chesapeakebay.net/discover/field-guide/entry/eastern-oyster",
-      "calc": {
-        "base": "years",
-        "rate": 100000000
-      },
-      "source_label": "Chesapeake Bay Program — Eastern Oyster"
+      "text": "หอยนางรมตะวันออกเพศเมียสร้างไข่ได้มากกว่า 100 ล้านฟองในการวางไข่หนึ่งครั้ง",
+      "source": "https://www.fisheries.noaa.gov/species/eastern-oyster/oyster-management-and-restoration",
+      "source_label": "NOAA Fisheries — Eastern Oyster Management and Restoration"
     },
     {
       "cat": "🪰 จักจั่นคาบ 17 ปี",
       "text": "จักจั่นแบบ periodical บางกลุ่มขึ้นจากดินพร้อมกันทุก 17 ปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงผ่านคาบจักจั่น {value:5} คาบ",
-      "source": "https://www.fs.usda.gov/foresthealth/docs/fidls/FIDL-173-PeriodicalCicadas.pdf",
+      "source": "https://www.fs.usda.gov/about-agency/features/here-come-cicadas",
       "calc": {
         "base": "years",
         "rate": 0.05882352941
       },
-      "source_label": "USDA Forest Service — Periodical Cicadas"
+      "source_label": "US Forest Service — Here Come the Cicadas"
     },
     {
       "cat": "🐦 ปีกนกฮัมมิงเบิร์ด",
@@ -1041,14 +1077,14 @@
       "source_label": "Smithsonian National Zoo — Hummingbird"
     },
     {
-      "cat": "🪵 นกหัวขวานเจาะไม้",
-      "text": "นกหัวขวานบางชนิดเคาะไม้ได้ถึง 20 ครั้งต่อวินาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามอัตราสูงสุดนี้คือ {value:0} ครั้ง",
-      "source": "https://www.allaboutbirds.org/news/how-woodpeckers-can-thrive-with-powerful-pecking/",
+      "cat": "🪵 จังหวะกลองของนกหัวขวาน",
+      "text": "นกหัวขวาน Nuttall’s woodpecker ตีกลองบนพื้นผิวด้วยอัตราประมาณ 20 ครั้งต่อวินาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามอัตรานี้คือ {value:0} ครั้ง",
+      "source": "https://www.allaboutbirds.org/news/how-to-recognize-woodpeckers-by-their-drumming-sounds/",
       "calc": {
         "base": "seconds",
         "rate": 20
       },
-      "source_label": "Cornell Lab of Ornithology — Woodpecker Pecking"
+      "source_label": "Cornell Lab of Ornithology — Woodpecker Drumming"
     },
     {
       "cat": "🐘 ช่วงห่างการเกิดลูกช้าง",
@@ -1063,7 +1099,7 @@
     {
       "cat": "🐋 หัวใจวาฬสีน้ำเงินยามดำน้ำ",
       "text": "งานวิจัยวัดชีพจรวาฬสีน้ำเงินขณะดำน้ำลึกได้ต่ำสุด 2 ครั้งต่อนาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามอัตราต่ำสุดนี้คือ {value:0} ครั้ง",
-      "source": "https://doi.org/10.1073/pnas.1914273116",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/31767746/",
       "calc": {
         "base": "seconds",
         "rate": 0.03333333333
@@ -1073,22 +1109,22 @@
     {
       "cat": "🌎 แผ่นดินไหวทั่วโลก",
       "text": "USGS ประเมินว่าเกิดแผ่นดินไหวที่ตรวจจับตำแหน่งได้ราว 500,000 ครั้งต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามค่าเฉลี่ยคือ {value:0} ครั้ง",
-      "source": "https://www.usgs.gov/programs/earthquake-hazards/lists-maps-and-statistics",
+      "source": "https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts",
       "calc": {
         "base": "years",
         "rate": 500000
       },
-      "source_label": "USGS — Earthquake Statistics"
+      "source_label": "USGS — Cool Earthquake Facts"
     },
     {
       "cat": "🌋 ภูเขาไฟปะทุ",
       "text": "ในแต่ละปีมีภูเขาไฟราว 50-70 ลูกปะทุบนโลก ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จำนวนตามขอบล่าง 50 ครั้งต่อปีคือ {value:2} ครั้ง",
-      "source": "https://www.usgs.gov/faqs/how-many-active-volcanoes-are-there-earth",
+      "source": "https://www.usgs.gov/news/volcano-watch-eruptions-help-cool-interior-earth-theres-a-long-way-go",
       "calc": {
         "base": "years",
         "rate": 50
       },
-      "source_label": "USGS — Active Volcanoes FAQ"
+      "source_label": "USGS — Volcano Watch: Eruptions per Year"
     },
     {
       "cat": "♨️ โอลด์เฟธฟูลพ่นน้ำ",
@@ -1132,13 +1168,13 @@
     },
     {
       "cat": "🏞️ น้ำไหลของแม่น้ำแอมะซอน",
-      "text": "แม่น้ำแอมะซอนปล่อยน้ำเฉลี่ยราว 209,000 ลูกบาศก์เมตรต่อวินาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรตามอัตรานี้คือ {value:0} ลูกบาศก์เมตร",
-      "source": "https://www.usgs.gov/special-topics/water-science-school/science/rivers-streams-and-creeks",
+      "text": "รายงาน USGS คำนวณการไหลเฉลี่ยของแม่น้ำแอมะซอนที่บริเวณ Óbidos ไว้ราว 157,000 ลูกบาศก์เมตรต่อวินาที ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรตามอัตรานี้คือ {value:0} ลูกบาศก์เมตร",
+      "source": "https://pubs.usgs.gov/publication/cir552",
       "calc": {
         "base": "seconds",
-        "rate": 209000
+        "rate": 157000
       },
-      "source_label": "USGS — Rivers, Streams, and Creeks"
+      "source_label": "USGS Circular 552 — Amazon River Discharge"
     },
     {
       "cat": "🌊 กระแสน้ำกัลฟ์สตรีม",
@@ -1163,32 +1199,32 @@
     {
       "cat": "🌧️ ฝนและหิมะทั่วโลก",
       "text": "วัฏจักรน้ำทำให้น้ำตกกลับสู่พื้นโลกประมาณ 505,000 ลูกบาศก์กิโลเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรสะสมคือ {value:2} ลูกบาศก์กิโลเมตร",
-      "source": "https://www.usgs.gov/media/images/global-water-cycle",
+      "source": "https://scied.ucar.edu/learning-zone/how-weather-works/water-cycle",
       "calc": {
         "base": "years",
         "rate": 505000
       },
-      "source_label": "USGS — Global Water Cycle"
+      "source_label": "UCAR Center for Science Education — The Water Cycle"
     },
     {
       "cat": "☀️ การระเหยจากมหาสมุทร",
       "text": "มหาสมุทรระเหยน้ำสู่บรรยากาศราว 434,000 ลูกบาศก์กิโลเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรสะสมคือ {value:2} ลูกบาศก์กิโลเมตร",
-      "source": "https://www.usgs.gov/media/images/global-water-cycle",
+      "source": "https://scied.ucar.edu/learning-zone/how-weather-works/water-cycle",
       "calc": {
         "base": "years",
         "rate": 434000
       },
-      "source_label": "USGS — Global Water Cycle"
+      "source_label": "UCAR Center for Science Education — The Water Cycle"
     },
     {
-      "cat": "🌿 การคายระเหยบนแผ่นดิน",
-      "text": "การระเหยและคายน้ำบนแผ่นดินส่งน้ำขึ้นบรรยากาศราว 71,000 ลูกบาศก์กิโลเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ปริมาตรสะสมคือ {value:2} ลูกบาศก์กิโลเมตร",
-      "source": "https://www.usgs.gov/media/images/global-water-cycle",
+      "cat": "🌊 ส่วนต่างของสมดุลน้ำโลก",
+      "text": "ส่วนต่างระหว่างน้ำที่ตกกลับสู่พื้นโลกทั่วโลก 505,000 กับน้ำที่ระเหยจากมหาสมุทร 434,000 ลูกบาศก์กิโลเมตรต่อปี คือ 71,000 ลูกบาศก์กิโลเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 ส่วนต่างสะสมคือ {value:2} ลูกบาศก์กิโลเมตร",
+      "source": "https://scied.ucar.edu/learning-zone/how-weather-works/water-cycle",
       "calc": {
         "base": "years",
         "rate": 71000
       },
-      "source_label": "USGS — Global Water Cycle"
+      "source_label": "UCAR Center for Science Education — The Water Cycle"
     },
     {
       "cat": "🌡️ วัฏจักร ENSO",
@@ -1203,12 +1239,12 @@
     {
       "cat": "☁️ คลื่นอากาศ MJO",
       "text": "Madden-Julian Oscillation ใช้เวลาราว 30-60 วันเคลื่อนวนในเขตร้อน ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 เมื่อนับคาบ 60 วันจึงผ่านอย่างน้อย {value:5} รอบ",
-      "source": "https://www.climate.gov/news-features/blogs/enso/what-mjo-and-why-do-we-care",
+      "source": "https://psl.noaa.gov/mjo/",
       "calc": {
         "base": "days",
         "rate": 0.01666666667
       },
-      "source_label": "NOAA Climate.gov — MJO"
+      "source_label": "NOAA Physical Sciences Laboratory — MJO"
     },
     {
       "cat": "🐦 น้ำหวานของฮัมมิงเบิร์ด",
@@ -1232,13 +1268,13 @@
     },
     {
       "cat": "🌋 แผ่นแปซิฟิกใต้ฮาวาย",
-      "text": "แผ่นแปซิฟิกที่พาหมู่เกาะฮาวายเคลื่อนไปทางตะวันตกเฉียงเหนือราว 7 เซนติเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงขยับ {value:5} เซนติเมตร",
-      "source": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-hawaii-hotspot-moving-plate",
+      "text": "แผ่นแปซิฟิกที่พาหมู่เกาะฮาวายเคลื่อนไปทางตะวันตกเฉียงเหนือราว 6 เซนติเมตรต่อปี ดังนั้นตั้งแต่เช้าวันแรกของ ป.1 จึงขยับ {value:5} เซนติเมตร",
+      "source": "https://www.usgs.gov/geology-and-ecology-of-national-parks/geology-hawaii-volcanoes-national-park",
       "calc": {
         "base": "years",
-        "rate": 7
+        "rate": 6
       },
-      "source_label": "USGS — Hawaii Hotspot Plate Movement"
+      "source_label": "USGS — Geology of Hawai‘i Volcanoes National Park"
     },
     {
       "cat": "🧊 ธารน้ำแข็ง Jakobshavn",
@@ -1262,11 +1298,11 @@
     },
     {
       "cat": "🚄 Acela",
-      "text": "ถ้ารถไฟ Acela วิ่งต่อเนื่องที่ความเร็วสูงสุด 150 ไมล์/ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะเดินทางได้ประมาณ {value:0} กม.",
+      "text": "ถ้ารถไฟ NextGen Acela วิ่งต่อเนื่องที่ความเร็วสูงสุด 160 ไมล์/ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะเดินทางได้ประมาณ {value:0} กม.",
       "source": "https://www.amtrak.com/next-generation-high-speed-trains",
       "calc": {
         "base": "seconds",
-        "rate": 0.067056
+        "rate": 0.0715264
       },
       "source_label": "Amtrak — Next-Gen High-Speed Trains"
     },
@@ -1283,12 +1319,12 @@
     {
       "cat": "✈️ Concorde",
       "text": "ถ้า Concorde บินต่อเนื่องที่ความเร็วเดินทาง 1,350 ไมล์/ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะบินได้ประมาณ {value:0} กม.",
-      "source": "https://airandspace.si.edu/collection-objects/air-france-concorde/nasm_A20030139000",
+      "source": "https://airandspace.si.edu/newsroom/press-releases/national-air-and-space-museum-receive-air-france-concorde-display-steven-f",
       "calc": {
         "base": "seconds",
         "rate": 0.603504
       },
-      "source_label": "Smithsonian Air & Space — Concorde"
+      "source_label": "Smithsonian National Air and Space Museum — Air France Concorde"
     },
     {
       "cat": "🚤 เรือเร็ว Spirit of Australia",
@@ -1323,17 +1359,17 @@
     {
       "cat": "🖨️ เครื่องพิมพ์ LaserJet",
       "text": "ถ้า HP LaserJet Enterprise MFP M528 พิมพ์ต่อเนื่องที่ 52 หน้า/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะพิมพ์ไปแล้วประมาณ {value:0} หน้า",
-      "source": "https://support.hp.com/us-en/document/c06321477",
+      "source": "https://support.hp.com/us-en/product/product-specs/hp-laserjet-enterprise-mfp-m528-series/model/19390474",
       "calc": {
         "base": "days",
         "rate": 74880
       },
-      "source_label": "HP — LaserJet Enterprise MFP M528"
+      "source_label": "HP Support — LaserJet Enterprise MFP M528f Specifications"
     },
     {
       "cat": "🧵 จักรเย็บผ้า",
       "text": "ถ้าจักร Brother ST150HDH เย็บต่อเนื่องที่ 850 ฝีเข็ม/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเย็บสะสมประมาณ {value:0} ฝีเข็ม",
-      "source": "https://www.brother-usa.com/products/st150hdh",
+      "source": "https://www.brother-usa.com/p/sewing-embroidery/ST150HDH",
       "calc": {
         "base": "days",
         "rate": 1224000
@@ -1353,12 +1389,12 @@
     {
       "cat": "🪥 แปรงสีฟันไฟฟ้า",
       "text": "ถ้าแปรง Philips Sonicare ทำงานต่อเนื่องที่ 62,000 การเคลื่อนไหว/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเคลื่อนไหวสะสมประมาณ {value:0} ครั้ง",
-      "source": "https://www.usa.philips.com/c-p/HX9911_90/diamondclean-9000-sonic-electric-toothbrush-with-app",
+      "source": "https://www.usa.philips.com/c-p/HX9911_91/9000-series-sonic-electric-toothbrush",
       "calc": {
         "base": "days",
         "rate": 89280000
       },
-      "source_label": "Philips — Sonicare DiamondClean 9000"
+      "source_label": "Philips — Sonicare 9000 Series"
     },
     {
       "cat": "🎹 เคาะคีย์เปียโน",
@@ -1403,12 +1439,12 @@
     {
       "cat": "⌚ กลไกนาฬิกา Rolex",
       "text": "ถ้ากลไก Rolex ที่ความถี่ 28,800 ครั้ง/ชม. เดินต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 ชุดควบคุมเวลาจะสั่นสะสมประมาณ {value:0} ครั้ง",
-      "source": "https://www.rolex.com/watchmaking/features/movements",
+      "source": "https://www.rolex.com/en-us/watchmaking/features/movement",
       "calc": {
         "base": "days",
         "rate": 691200
       },
-      "source_label": "Rolex — Watch Movements"
+      "source_label": "Rolex — Watch Movement"
     },
     {
       "cat": "💵 แท่นพิมพ์ธนบัตร",
@@ -1452,21 +1488,21 @@
     },
     {
       "cat": "🌬️ กังหัน Haliade-X",
-      "text": "ถ้ากังหันลม Haliade-X รุ่น 14 เมกะวัตต์ผลิตเต็มกำลังต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะให้พลังงานประมาณ {value:0} เมกะวัตต์-ชั่วโมง",
-      "source": "https://www.gevernova.com/wind-power/offshore-wind/haliade-x-offshore-turbine",
+      "text": "ถ้ากังหันลม Haliade-X รุ่น 12 เมกะวัตต์ผลิตเต็มกำลังต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะให้พลังงานประมาณ {value:0} เมกะวัตต์-ชั่วโมง",
+      "source": "https://www.gevernova.com/wind-power/wind-turbines/offshore-wind-turbines",
       "calc": {
         "base": "days",
-        "rate": 336
+        "rate": 288
       },
-      "source_label": "Gevernova — gevernova.com"
+      "source_label": "GE Vernova — Haliade-X Offshore Wind Turbine"
     },
     {
       "cat": "🧮 ซูเปอร์คอมพิวเตอร์ Frontier",
-      "text": "ถ้า Frontier คำนวณต่อเนื่องที่ 1.194 เอกซาฟลอปส์ตั้งแต่เช้าวันแรกของ ป.1 จะทำการคำนวณสะสมประมาณ {value:0} ล้านล้านล้านครั้ง",
+      "text": "ถ้า Frontier คำนวณต่อเนื่องที่สมรรถนะสูงสุดเชิงทฤษฎี 1.6 เอกซาฟลอปส์ตั้งแต่เช้าวันแรกของ ป.1 จะทำการคำนวณสะสมประมาณ {value:0} ล้านล้านล้านครั้ง",
       "source": "https://www.olcf.ornl.gov/frontier/",
       "calc": {
         "base": "seconds",
-        "rate": 1.194
+        "rate": 1.6
       },
       "source_label": "Ornl — olcf.ornl.gov"
     },
@@ -1482,18 +1518,18 @@
     },
     {
       "cat": "🔌 USB4",
-      "text": "ถ้า USB4 ส่งข้อมูลต่อเนื่องที่ 40 กิกะบิต/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งข้อมูลได้ประมาณ {value:0} กิกะไบต์",
+      "text": "ถ้า USB4 Version 2.0 ส่งข้อมูลต่อเนื่องที่ 80 กิกะบิต/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งข้อมูลได้ประมาณ {value:0} กิกะไบต์",
       "source": "https://www.usb.org/usb4",
       "calc": {
         "base": "seconds",
-        "rate": 5
+        "rate": 10
       },
       "source_label": "USB-IF — USB4 Specification"
     },
     {
       "cat": "🔗 HDMI 2.2",
       "text": "ถ้า HDMI 2.2 ส่งข้อมูลต่อเนื่องเต็มแบนด์วิดท์ 96 กิกะบิต/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งข้อมูลประมาณ {value:0} กิกะไบต์",
-      "source": "https://www.hdmi.org/spec21sub/eightk60_fourk120",
+      "source": "https://www.hdmi.org/spec/hdmi2",
       "calc": {
         "base": "seconds",
         "rate": 12
@@ -1513,12 +1549,12 @@
     {
       "cat": "📶 Wi-Fi 7",
       "text": "ถ้า Wi-Fi 7 ส่งข้อมูลต่อเนื่องที่อัตราสูงสุดเชิงทฤษฎี 46 กิกะบิต/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะส่งได้ประมาณ {value:0} กิกะไบต์",
-      "source": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7",
+      "source": "https://www.intel.com/content/www/us/en/gaming/resources/wifi-7.html",
       "calc": {
         "base": "seconds",
         "rate": 5.75
       },
-      "source_label": "Wi-Fi Alliance — Wi-Fi CERTIFIED 7"
+      "source_label": "Intel — Wi-Fi 7"
     },
     {
       "cat": "🟦 Bluetooth LE",
@@ -1543,32 +1579,32 @@
     {
       "cat": "💿 แผ่นเสียง 33⅓ RPM",
       "text": "ถ้าแผ่นเสียง LP หมุนต่อเนื่องที่ 33⅓ รอบ/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะหมุนสะสมประมาณ {value:0} รอบ",
-      "source": "https://www.loc.gov/preservation/scientists/projects/record_playback.html",
+      "source": "https://www.loc.gov/marc/bibliographic/bd007s.html",
       "calc": {
         "base": "days",
         "rate": 48000
       },
-      "source_label": "Library of Congress — Record Playback"
+      "source_label": "Library of Congress — MARC Sound Recording Speed Codes"
     },
     {
       "cat": "🎧 เสียงดิจิทัลจาก CD",
       "text": "ถ้าช่องเสียงหนึ่งช่องของ CD ถูกสุ่มตัวอย่างต่อเนื่องที่ 44,100 ครั้ง/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะมีตัวอย่างเสียงประมาณ {value:0} ตัวอย่าง",
-      "source": "https://www.philips.com/a-w/research/technologies/cd/beginning.html",
+      "source": "https://www.sony.com/electronics/support/audio-video-radios/srf-19w/articles/00165079",
       "calc": {
         "base": "seconds",
         "rate": 44100
       },
-      "source_label": "Philips — Compact Disc Technology"
+      "source_label": "Sony Support — CD Sampling Frequency"
     },
     {
       "cat": "🎼 เมโทรนอม",
       "text": "ถ้าเมโทรนอมเดินต่อเนื่องที่ 120 จังหวะ/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเคาะสะสมประมาณ {value:0} จังหวะ",
-      "source": "https://hub.yamaha.com/keyboards/k-how-to/how-to-use-a-metronome/",
+      "source": "https://hub.yamaha.com/guitars/g-how-to/playing-with-tempo/",
       "calc": {
         "base": "days",
         "rate": 172800
       },
-      "source_label": "Yamaha — How to Use a Metronome"
+      "source_label": "Yamaha — Playing with Tempo"
     },
     {
       "cat": "🎵 โน้ตมาตรฐาน A4",
@@ -1592,11 +1628,11 @@
     },
     {
       "cat": "🏸 ลูกตบแบดมินตัน",
-      "text": "ถ้าลูกขนไก่เคลื่อนต่อเนื่องด้วยสถิติความเร็ว 565 กม./ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะเดินทางได้ประมาณ {value:0} กม.",
+      "text": "ถ้าลูกขนไก่เคลื่อนต่อเนื่องด้วยสถิติความเร็วในการแข่งขัน 426 กม./ชม. ตั้งแต่เช้าวันแรกของ ป.1 จะเดินทางได้ประมาณ {value:0} กม.",
       "source": "https://www.guinnessworldrecords.com/world-records/fastest-badminton-hit-in-competition-male",
       "calc": {
         "base": "seconds",
-        "rate": 0.15694444444444444
+        "rate": 0.11833333333333333
       },
       "source_label": "Guinness World Records — Fastest Badminton Hit"
     },
@@ -1622,53 +1658,53 @@
     },
     {
       "cat": "🪢 กระโดดเชือก",
-      "text": "ถ้ากระโดดเชือกต่อเนื่องด้วยสถิติ 246 ครั้งใน 30 วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะกระโดดสะสมประมาณ {value:0} ครั้ง",
+      "text": "ถ้ากระโดดเชือกต่อเนื่องด้วยสถิติ 171 ครั้งใน 30 วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะกระโดดสะสมประมาณ {value:0} ครั้ง",
       "source": "https://www.guinnessworldrecords.com/world-records/most-skips-in-30-seconds",
       "calc": {
         "base": "seconds",
-        "rate": 8.2
+        "rate": 5.7
       },
       "source_label": "Guinness World Records — Most Skips in 30 Seconds"
     },
     {
       "cat": "🏀 เลี้ยงบาสเกตบอล",
-      "text": "ถ้าเลี้ยงลูกบาสต่อเนื่องด้วยสถิติ 708 ครั้ง/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเดาะลูกสะสมประมาณ {value:0} ครั้ง",
+      "text": "ถ้าเลี้ยงลูกบาสต่อเนื่องด้วยสถิติ 762 ครั้ง/นาทีตั้งแต่เช้าวันแรกของ ป.1 จะเดาะลูกสะสมประมาณ {value:0} ครั้ง",
       "source": "https://www.guinnessworldrecords.com/world-records/most-basketball-bounces-in-one-minute",
       "calc": {
         "base": "days",
-        "rate": 1019520
+        "rate": 1097280
       },
       "source_label": "Guinness World Records — Basketball Bounces"
     },
     {
       "cat": "🏊 ฟรีสไตล์ 50 เมตร",
-      "text": "ถ้าว่ายต่อเนื่องด้วยเพซสถิติโลกฟรีสไตล์ 50 เมตรชาย 20.91 วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะว่ายได้ประมาณ {value:0} เมตร",
-      "source": "https://www.worldaquatics.com/swimming/records",
+      "text": "ถ้าว่ายต่อเนื่องด้วยเพซสถิติโลกฟรีสไตล์ 50 เมตรชาย 20.88 วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะว่ายได้ประมาณ {value:0} เมตร",
+      "source": "https://www.worldaquatics.com/news/4474806/swimming-world-record-cameron-mcevoy-breaks-iconic-50m-freestyle-world-record-cesar-cielo",
       "calc": {
         "base": "seconds",
-        "rate": 2.391200382592061
+        "rate": 2.3946360153256707
       },
-      "source_label": "World Aquatics — Swimming Records"
+      "source_label": "World Aquatics — McEvoy 50m Freestyle World Record (2026)"
     },
     {
       "cat": "⛸️ สปีดสเกต",
       "text": "ถ้านักสปีดสเกตรักษาสถิติความเร็ว 103 กม./ชม. ต่อเนื่องตั้งแต่เช้าวันแรกของ ป.1 จะไถลได้ประมาณ {value:0} กม.",
-      "source": "https://www.guinnessworldrecords.com/world-records/fastest-speed-on-ice-skates",
+      "source": "https://www.redbull.com/int-en/speed-skating-guide",
       "calc": {
         "base": "seconds",
         "rate": 0.02861111111111111
       },
-      "source_label": "Guinness World Records — Fastest Speed on Ice Skates"
+      "source_label": "Red Bull — Speed Skating Guide"
     },
     {
       "cat": "🎬 ฟิล์มภาพยนตร์ 24 FPS",
       "text": "ถ้ากล้องฟิล์มเดินต่อเนื่องที่มาตรฐานเสียงภาพยนตร์ 24 เฟรม/วินาทีตั้งแต่เช้าวันแรกของ ป.1 จะบันทึกได้ประมาณ {value:0} เฟรม",
-      "source": "https://www.oscars.org/science-technology/sci-tech-projects/motion-picture-film",
+      "source": "https://www.oscars.org/film-archive/collections/showscan-collection",
       "calc": {
         "base": "seconds",
         "rate": 24
       },
-      "source_label": "Academy of Motion Pictures — Film Technology"
+      "source_label": "Academy Film Archive — Showscan Collection"
     }
   ]
 }
